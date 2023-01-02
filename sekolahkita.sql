@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Bulan Mei 2020 pada 02.15
--- Versi server: 10.1.34-MariaDB
--- Versi PHP: 5.6.37
+-- Generation Time: 02 Jan 2023 pada 14.57
+-- Versi Server: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -46,14 +44,7 @@ CREATE TABLE `tbl_agenda` (
 --
 
 INSERT INTO `tbl_agenda` (`agenda_id`, `agenda_nama`, `agenda_tanggal`, `agenda_deskripsi`, `agenda_mulai`, `agenda_selesai`, `agenda_tempat`, `agenda_waktu`, `agenda_keterangan`, `agenda_author`) VALUES
-(1, 'POST TEST PKB TK, SD, SMP DI TUK SMP 4 PAKEM BERJALAN LANCAR', '2017-01-22 06:18:01', 'Sejak awal  sampai dengan 17 November 2018   secara maraton dilaksanakan pos tes PKB di SMP 4 Pakem.  Pos tes dilaksanakan  setiap hari dengan 2 shiff pagi dan siang, bahkan pada tanggal 14 dan 17 November  dilaksanakan 3 shiff, pagi siang dan sore.', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'Sejak awal  sampai dengan 17 November 2018   secara maraton dilaksanakan pos tes PKB di SMP 4 Pakem.  Pos tes dilaksanakan  setiap hari dengan 2 shiff pagi dan siang, bahkan pada tanggal 14 dan 17 Nov', 'Muris Studio'),
-(2, 'PEMBINAAN PENINGKATAN KAPASITAS ANGGOTA KORPRI SUB UNIT PELAYANAN PENDIDIKAN KECAMATAN PAKEM', '2017-01-22 06:26:33', 'Bertempat di aula SMP Negeri 4 Pakem Kamis, 2 Agustus 2018 dilaksanakan kegiatan pembinaan peningkatan kapasitas anggota KORPRI Sub unit Pelayanan Pendidikan Kecamatan Pakem. Kegiatan ini diikuti oleh guru dan karyawan jenjang TK, SD, SMP/Mts dan tenaga UPT Yandik Kecamatan Pakem. Hadir sebagai nara sumber adalah ketua unit korpri Dinas Pendidikan', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '07.30 - 12.00 WIB', '-Bertempat di aula SMP Negeri 4 Pakem Kamis, 2 Agustus 2018 dilaksanakan kegiatan pembinaan peningkatan kapasitas anggota KORPRI Sub unit Pelayanan Pendidikan Kecamatan Pakem. Kegiatan ini diikuti ole', 'Muris Studio'),
-(3, 'KEGIATAN SORE AWAL TAHUN PELAJARAN 2018/2019', '2017-01-22 06:29:49', 'Berikut kami sampaikan agenda kegiatan sore awal tahun pelajaran 2018/2019', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '07.30 - 12.00 WIB', 'KEGIATAN SORE AWAL TAHUN PELAJARAN 2020', 'Muris Studio'),
-(4, 'TUJUH SMP DI SLEMAN MELAKSANAKAN TPM ONLINE BERSAMA', '2020-05-02 12:28:14', 'Dalam rangka mempersiapkan siswa siswi kelas 9 menghadapi UN 2019 beberapa sekolah bekerja sama untuk melaksanakan kegiatan Tes Pendalaman Materi (TPM) mata pelajaran yang di UN kan.  TPM ini meliputi mata pelajaran Bahasa Indonesia, Matematika, Bahasa Inggris dan Ilmu Pengetahuan Alam. TPM kali ini bukan hanya sekedar CBT tapi dilaksanakan secara online.', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'Dalam rangka mempersiapkan siswa siswi kelas 9 menghadapi UN 2019 beberapa sekolah bekerja sama untuk melaksanakan kegiatan Tes Pendalaman Materi (TPM) mata pelajaran yang di UN kan.  TPM ini meliputi', 'Muris Studio'),
-(5, 'PENYULUHAN PSIKOLOGI REMAJA SISWA SISWI', '2020-05-02 12:28:41', 'Dalam rangka memperkuat perkembangan pribadi yang baik, dan antisipasi dari segala bentuk penyimpangan, semua siswa SMP N 4 Pakem mengikuti kegiatan penyuluhan perkembangan remaja. Kegiatan ini dilaksanakan Jumat, 7 Desember 2018 bertempat di ruang A1, diikuti oleh semua siswa kelas 7,8 dan 9.', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'Dalam rangka memperkuat perkembangan pribadi yang baik, dan antisipasi dari segala bentuk penyimpangan, semua siswa SMP N 4 Pakem mengikuti kegiatan penyuluhan perkembangan remaja. Kegiatan ini dilaks', 'Muris Studio'),
-(6, 'TKM DAN PAS ONLINE DI SMP BERJALAN LANCAR', '2020-05-02 12:29:05', 'Sejak beberapa tahun terakhir pembelajaran dan penilaian SMP N 4 Pakem dilakukan secara online. Demikian pula kegiatan tes kendali mutu kabupaten Sleman dan penilaian akhir semester ganjil tahun ajaran 2018/2019 yang dilaksanakan 27 November s.d. 5 Desember 2018 terlaksana dengan sangat lancar.', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'Sejak beberapa tahun terakhir pembelajaran dan penilaian SMP N 4 Pakem dilakukan secara online. Demikian pula kegiatan tes kendali mutu kabupaten Sleman dan penilaian akhir semester ganjil tahun ajara', 'Muris Studio'),
-(7, 'MENDADAK SEMUA WARGA BERLINDUNG DI TEMPAT AMAN, BEL SEKOLAH BERBUNYI TIDAK BERATURAN, SUARA KERAS TERDENGAR MEMINTA UNTUK SEGERA BERLINDUNG, SUASANA MENCEKAM', '2020-05-02 12:29:52', 'MENDADAK SEMUA WARGA BERLINDUNG DI TEMPAT AMAN, BEL SEKOLAH BERBUNYI TIDAK BERATURAN, SUARA KERAS TERDENGAR MEMINTA UNTUK SEGERA BERLINDUNG, SUASANA MENCEKAM', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'MENDADAK SEMUA WARGA BERLINDUNG DI TEMPAT AMAN, BEL SEKOLAH BERBUNYI TIDAK BERATURAN, SUARA KERAS TERDENGAR MEMINTA UNTUK SEGERA BERLINDUNG, SUASANA MENCEKAM', 'Muris Studio'),
-(8, 'PENGUATAN KARAKTER DI SEKOLAH MELALUI PERMAINAN TRADISIONAL', '2020-05-02 12:30:15', 'Suasana riuh  sorak sorai, penuh tepuk tangan dan gelak tawa. Itulah suasana  pagi hingga siang pada Kamis, 6 Desember 2018 di SMP Negeri 4 Pakem.  Berbeda dengan hari hari biasanya,  sehari setelah selesai pelaksanaan penilaian akhir semester (PAS) ganjil tahun ajaran 2018/2019 guru, karyawan dan siswa bermain, barcanda tawa sambil berolahraga bersama', '2020-05-02', '2020-05-02', 'MURIS STUDIO', '08.00 - 11.00 WIB', 'Suasana riuh  sorak sorai, penuh tepuk tangan dan gelak tawa. Itulah suasana  pagi hingga siang pada Kamis, 6 Desember 2018 di SMP Negeri 4 Pakem.  Berbeda dengan hari hari biasanya,  sehari setelah s', 'Muris Studio');
+(9, 'ssssq', '2022-12-29 03:40:53', 'dzg', '0000-00-00', '0000-00-00', 'mall', '11.00-10.00', 'fxxfxgffg', 'kkk');
 
 -- --------------------------------------------------------
 
@@ -76,9 +67,51 @@ CREATE TABLE `tbl_album` (
 --
 
 INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`) VALUES
-(1, 'Kegiatan Pramuka', '2016-09-08 13:00:55', 1, 'Muris Studio', 5, '1445904c89e36f5fd6aa6ab9c3992adc.jpg'),
-(3, 'Kegiatan OSIS', '2017-01-21 01:58:16', 1, 'Muris Studio', 3, '047cf01a796131d142a90db9a3dd96ca.jpg'),
-(4, 'Foto Kegiatan Siswa Sekolah', '2017-01-24 01:31:13', 1, 'Muris Studio', 7, 'b115c482c4fb08add9091208bf4dc500.jpg');
+(5, 'ffff', '2022-12-29 03:44:06', 2, 'kkk', 1, '92732b603ebd37a85d1cfad525895c67.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_banners`
+--
+
+CREATE TABLE `tbl_banners` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  `photo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_banners`
+--
+
+INSERT INTO `tbl_banners` (`id`, `title`, `text`, `photo`) VALUES
+(0, 'NAsi Adalah SEBUAH KARBOHIDRAT', 'AKu Makan Nasi', 'adb2a71cf4c59dbd387bbf5b798ced68.jpeg'),
+(2, 'SMK MUHAMMADIYAH 09 PACIRAN ', 'Beprestasi , Berakhlak , Sopan dan Santun ', '736c498e7ed4b42f086d535fed871db1.jpg'),
+(3, 'SMK MUHAMMADIYAH 09 PACIRAN  2', 'Beprestasi , Berakhlak , Sopan dan Santun ', '736c498e7ed4b42f086d535fed871db1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_fasilitas`
+--
+
+CREATE TABLE `tbl_fasilitas` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_fasilitas`
+--
+
+INSERT INTO `tbl_fasilitas` (`id`, `ket`, `foto`) VALUES
+(1, 'Labotarium Komputer', 'b32e6036a961ee60093d1e57faed4eda.jpg'),
+(2, 'bbbbbbbbbbbbbbb', '000f23940c94881193e19677defe3273.jpg'),
+(3, 'Lapangan Sekolah', 'f469c2387408c4c4f0a77f5ffbc1df66.jpeg'),
+(4, 'Bangunan Sekolah', '7361ca3d02ecf76801d35f2434175769.jpeg');
 
 -- --------------------------------------------------------
 
@@ -148,7 +181,8 @@ INSERT INTO `tbl_galeri` (`galeri_id`, `galeri_judul`, `galeri_tanggal`, `galeri
 (15, 'Belajar komputer programming', '2017-01-24 01:32:34', 'cf0585d2d5a627639ef4ed48beab65c2.jpg', 4, 1, 'Muris Studio'),
 (16, 'Belajar komputer programming', '2017-01-24 01:32:44', 'e53b596a6a821179169c647ffdaebd10.jpg', 4, 1, 'Muris Studio'),
 (17, 'Belajar sambil bermain', '2017-01-24 01:33:08', 'e8ec9657a6c5ff5eea059785c949b5ce.jpg', 4, 1, 'Muris Studio'),
-(18, 'Makan bersama', '2017-01-24 01:33:24', 'a92df7b3e7a8488f0e8ca186e6551194.jpg', 4, 1, 'Muris Studio');
+(18, 'Makan bersama', '2017-01-24 01:33:24', 'a92df7b3e7a8488f0e8ca186e6551194.jpg', 4, 1, 'Muris Studio'),
+(19, 'Foto Bersama', '2022-12-29 03:44:36', '2ba5111001f1c06f7570fa5bb9d650bf.jpg', 5, 2, 'kkk');
 
 -- --------------------------------------------------------
 
@@ -174,14 +208,7 @@ CREATE TABLE `tbl_guru` (
 
 INSERT INTO `tbl_guru` (`guru_id`, `guru_nip`, `guru_nama`, `guru_jenkel`, `guru_tmp_lahir`, `guru_tgl_lahir`, `guru_mapel`, `guru_photo`, `guru_tgl_input`) VALUES
 (1, '-', 'Nensy Larasati,S.Pd.', 'L', 'Bandung', '25 September 1993', 'Bahasa Jawa	', 'a9cbe86849c837cc0931eff7b9991d00.png', '2017-01-26 07:49:43'),
-(2, '927482658274981', 'Mei Indri, S.Pd', 'L', 'Purwokerto', '25 Juni 2020', 'Bahasa Indonesia	', '792ef9e0267a1b021c9b99763a980a0b.jpg', '2017-01-26 13:38:54'),
-(3, '-', 'Agustina Setyani,S.Ag', 'L', 'Purwokerto', '15 Desember 1995', 'Agama', '96e1400c5cf46d382073e8e8af0b86b6.jpg', '2017-01-26 13:41:20'),
-(4, '-', 'Fury Ismaya, S.Pd', 'P', 'Purwokerto', '15 Desember 1995', 'Sejarah', '999998fd4172c4cd99389b7f734d2b23.jpg', '2017-01-26 13:42:08'),
-(5, '-', 'Arneta Dwi Safitri, M. Pd.', 'P', 'Purwokerto', '15 Desember 1995', 'Fisika', '5b88365eea4e14fd027adf1ed0c17efa.jpeg', '2017-01-26 13:42:48'),
-(6, '-', 'Rachmaningtiyas Wietda Ayu Nirmandini, S.Pd.', 'L', 'Purwokerto', '15 Desember 1995', 'Matematika', '0010e6d466aef6042f7a914c7f567dd3.jpg', '2017-01-26 13:43:46'),
-(7, '-', 'Lutviarini Latifah, S.Pd., M.Sc.', 'P', 'Purwokerto', '15 Desember 1995', 'Bahasa Inggris, IPA', 'b2917470f024fc3dd62c43e37665d767.jpg', '2017-01-26 13:45:11'),
-(8, '-', 'Asrini Yuli Wahyuni,SH', 'P', 'Purwokerto', '15 Desember 1995', 'Olahraga', 'efb1d0cc744b320f6dae31c4711f562a.jpg', '2017-01-27 04:28:23'),
-(9, '-', 'Windy Mazaya Amalina', 'P', 'Purwokerto', '15 Desember 1995', 'Sejarah', '1d3b877f1619db4e2fd883a2aff15b09.jpg', '2020-05-01 21:18:30');
+(2, '927482658274981', 'Mei Indri, S.Pd', 'L', 'Purwokerto', '25 Juni 2020', 'Bahasa Indonesia	', '792ef9e0267a1b021c9b99763a980a0b.jpg', '2017-01-26 13:38:54');
 
 -- --------------------------------------------------------
 
@@ -338,6 +365,26 @@ INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`, `keterangan_mapel`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_pengaturan`
+--
+
+CREATE TABLE `tbl_pengaturan` (
+  `id_pengaturan` int(11) NOT NULL,
+  `visi` varchar(200) NOT NULL,
+  `misi` varchar(200) NOT NULL,
+  `sejarah` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_pengaturan`
+--
+
+INSERT INTO `tbl_pengaturan` (`id_pengaturan`, `visi`, `misi`, `sejarah`) VALUES
+(1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa similique quae maiores consectetur ', 'Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Eveniet impedit nulla beatae quos distinctio alias odio quas, unde voluptas accusantium incidunt illo deserunt, nihil amet necessitatibus exe', 'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolore voluptatum praesentium debitis, alias ut amet, quod ab possimus iusto voluptas laudantium nemo quos, blanditiis iste omnis deleniti itaque accusamus nihil quidem est. Ipsa harum voluptatem iste velit porro, ad debitis molestiae. Reiciendis dolorem libero eaque assumenda et voluptas reprehenderit iste mollitia, commodi error harum, cum facere maxime adipisci ex ipsam sequi. Officiis non incidunt, dicta inventore in ducimus quo unde error id sapiente tempora, natus repellendus est adipisci quae, a numquam aut doloremque, consequatur aliquid. Esse magni aperiam similique optio recusandae quisquam odit tempora dicta unde, autem? Nihil tenetur deleniti ipsum commodi molestias hic, excepturi, minima iste quibusdam fugiat doloremque velit omnis nostrum dignissimos officia! Cupiditate, veritatis, cum! Repellendus consequuntur, quibusdam quo ut error aspernatur ipsam voluptatem fuga eius, molestiae.');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_pengguna`
 --
 
@@ -366,7 +413,8 @@ CREATE TABLE `tbl_pengguna` (
 --
 
 INSERT INTO `tbl_pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_moto`, `pengguna_jenkel`, `pengguna_username`, `pengguna_password`, `pengguna_tentang`, `pengguna_email`, `pengguna_nohp`, `pengguna_facebook`, `pengguna_twitter`, `pengguna_linkdin`, `pengguna_google_plus`, `pengguna_status`, `pengguna_level`, `pengguna_register`, `pengguna_photo`) VALUES
-(1, 'Muris Studio', 'Solusi Informasi Teknolosi', 'L', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Solusi Informasi Teknolosi', 'suryaciptainformatika@gmail.com', '085799696924', '-', '-', '', '', 1, '1', '2020-09-03 06:07:55', 'dcffbd1ad6ae7b98222701364708adb4.png');
+(1, 'Ajijon', 'a', 'L', 'akuadmin', '21232f297a57a5a743894a0e4a801fc3', '\\', 'itzonefutur@gmail.com', '08755547645', '-', '-', '', '', 1, '1', '2020-09-03 06:07:55', '6ff896557768354eae9f9add764707f2.jpg'),
+(2, 'kkk', NULL, 'L', 'user', '6ad14ba9986e3615423dfca256d04e3f', NULL, 'user@mail.com', '134141341354', NULL, NULL, NULL, NULL, 1, '2', '2022-12-29 03:31:55', '8ea74dd021d956683ca067546edaa8eb.jpg');
 
 -- --------------------------------------------------------
 
@@ -387,14 +435,7 @@ CREATE TABLE `tbl_pengumuman` (
 --
 
 INSERT INTO `tbl_pengumuman` (`pengumuman_id`, `pengumuman_judul`, `pengumuman_deskripsi`, `pengumuman_tanggal`, `pengumuman_author`) VALUES
-(1, 'INFORMASI PERINGATAN HARI PRAMUKA', 'Informasi disampaikan kepada seluruh siswa SMP Negeri 4 Pakem bahwa pada hari Senin 14 Agustus 2020 upacara / apel hari pramuka. Semua siswa memakai pakaian pramuka lengkap dengan segala atributnya. Jam pelaksanaan upacara / apel seperti biasa tiap hari Senin.', '2020-05-02 01:17:30', 'Muris Studio'),
-(2, 'INFORMASI PELAKSANAAN UPACARA PERINGATAN HUT RI KE-72', 'Informasi disampaikan kepada seluruh Siswa SMP Negeri 4 Pakem bahwa pada hari Kamis 17 Agustus 2017 upacara dalam rangka HUT RI ke-72. Semua siswa memakai pakaian yang biasa dipakai pada hari senin.  Upacara dimulai pukul 07.00 WIB. Setelah selesai upacara, siswa langsung pulang. Kecuali petugas yang ditunjuk mewakili sekolah di kecamatan.Yang bertempat di M-Sekolah. Raport diambil oleh orang tua/wali kelas murid masing-masing', '2020-05-02 01:17:30', 'Muris Studio'),
-(3, ' NOV 2017 0 Pengumuman Sekolah INFORMASI UPACARA PERINGATAN HARI PAHLAWAN', 'Informasi disampaikan kepada seluruh Siswa SMP Negeri 4 Pakem bahwa pada hari Jumat 10 Nopember 2017 upacara peringatan Hari Pahlawan. Tidak ada senam pagi. Semua siswa memakai pakaian pramuka.  Upacara dimulai pukul 06.30 WIB. Informasi mohon disebarluaskan. Terimakasih', '2020-05-02 01:17:30', 'Muris Studio'),
-(4, 'PENDATAAN SISWA KELAS 7 BOARDING & REGULER', 'Pengumuman khusus untuk siswa baru kelas 7 CIBI BOARDING & Kelas Reguler Kepada seluruh siswa baru kelas 7 CIBI BOARDING & Kelas Reguler diwajibkan untuk mengisi form pendataan siswa baru. Harap untuk menyiapkan dokumen pendukung sebelum mengisi formulir', '2020-05-02 01:17:30', 'Muris Studio'),
-(5, 'PENGUMUMAN UNTUK SISWA KELAS 9', 'Diumumkan kepada seluruh siswa kelas 9 SMP Negeri 4 Pakem diharapkan hadir di sekolah : Hari /tanggal  : Jumat, 17 Juni 2016 Jam                   : 08.00 WIB Tempat             : Aula depan Untuk cap 3 jari ijazah & mengambil undangan pelepasan siswa kelas 9', '2020-05-02 12:19:09', 'Muris Studio'),
-(6, 'PANDUAN KEGIATAN RAMADHAN 1441 H', 'Berikut kami sampaikan panduan kegiatan ramadhan 1441 H , silakan unduh di tautan berikut :\r\n\r\nPANDUAN RAMADHAN 1441 H \r\n\r\nInformasi sekolah terbaru, selalu kunjungi web sekolah!', '2020-05-02 12:19:58', 'Muris Studio'),
-(7, 'JADWAL PEMBELAJARAN JARAK JAUH MULAI 29 APRIL- 5 MEI 2020', 'Berikut kami sampaikan jadwal pembelajaran jarak jauh 29 April – 5 Mei 2020 dan  perpanjangan masa belajar dirumah berlaku mulai 29 April  – 16 Mei 2020, silakan unduh di tautan berikut :\r\n\r\nJADWAL PEMBELAJARAN JARAK JAUH 29 APRIL – 5 MEI 2020\r\nINFORMASI PJJ 29 APRIL – 16 MEI 2020\r\nPANDUAN RAMADHAN 1441 H \r\nInformasi sekolah ter-update, selalu kunjungi web sekolah. Terimakasih.', '2020-05-02 12:21:31', 'Muris Studio'),
-(8, 'JADWAL BARU PEMBELAJARAN ONLINE 22-28 APRIL 2020', 'Berikut kami sampaikan jadwal pembelajaran online berlaku mulai 22-28 April 2020, serta informasi OSOP silakan unduh di tautan berikut :\r\n\r\n>>JADWAL PEMBELAJARAN ONLINE_ 22-28 APRIL 2020<<\r\n\r\nInformasi sekolah ter-update, selalu kunjungi web sekolah. Terimakasih.', '2020-05-02 12:21:59', 'Muris Studio');
+(9, 'frsarta', 'gdzhfzhfzxf hgxf', '2022-12-29 03:39:21', 'kkk');
 
 -- --------------------------------------------------------
 
@@ -427,7 +468,40 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (940, '2020-05-03 21:17:35', '::1', 'Chrome'),
 (941, '2020-05-04 22:36:09', '::1', 'Chrome'),
 (942, '2020-05-05 21:10:13', '::1', 'Chrome'),
-(943, '2020-05-05 21:32:53', '192.168.43.1', 'Chrome');
+(943, '2020-05-05 21:32:53', '192.168.43.1', 'Chrome'),
+(944, '2022-12-22 12:28:57', '127.0.0.1', 'Firefox'),
+(945, '2022-12-23 08:42:55', '127.0.0.1', 'Firefox'),
+(946, '2022-12-27 14:36:50', '::1', 'Chrome'),
+(947, '2022-12-28 00:19:56', '127.0.0.1', 'Firefox'),
+(948, '2022-12-28 03:06:44', '::1', 'Chrome'),
+(949, '2022-12-29 02:08:12', '127.0.0.1', 'Firefox'),
+(950, '2022-12-29 02:10:02', '::1', 'Chrome'),
+(951, '2022-12-30 00:51:25', '::1', 'Chrome'),
+(952, '2022-12-30 11:01:06', '127.0.0.1', 'Firefox'),
+(953, '2022-12-31 00:53:21', '::1', 'Chrome'),
+(954, '2022-12-31 17:09:44', '::1', 'Chrome'),
+(955, '2023-01-01 03:45:58', '127.0.0.1', 'Firefox'),
+(956, '2023-01-02 01:09:13', '127.0.0.1', 'Firefox'),
+(957, '2023-01-02 01:27:05', '::1', 'Chrome');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_prestasi`
+--
+
+CREATE TABLE `tbl_prestasi` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_prestasi`
+--
+
+INSERT INTO `tbl_prestasi` (`id`, `ket`, `foto`) VALUES
+(0, 'bbbbbbbbbbbbbbb', 'b1b7c5f7e227a8c3ec6969880ea5c01a.jpg');
 
 -- --------------------------------------------------------
 
@@ -501,11 +575,7 @@ CREATE TABLE `tbl_tulisan` (
 --
 
 INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
-(20, 'SEJUMLAH PESERTA DIDIK SMAN 78 MASUK PTN MELALUI JALUR PRESTASI', '<p>Tahun Pelajaran 2018/2019 Sejumlah Peserta didik SMAN 78 Jakarta di terima di perguruan Tinggi Negeri melalui Jalur prestasi, diantaranya masuk melalui jalur Seleksi Nasional Perguruan tinggi Negeri (SNMPTN) berjumlah 58 siswa.</p>\r\n\r\n<p>Mereka merupakan putra putri terbaik yang memiliki prestasi akademik 40% terbaik di sekolah dan terseleksi melalui jalur raport tanpa test. Kampus yang bakal mereka tempati seperti di UI, ITB, UGM, UNJ dan lain sebagainya.</p>\r\n\r\n<p>Selain melalui jalur SNMPTN ada juga sebanyak 34 siswa dari SMAN 78 Jakarta juga diterima di jalur prestasi dan pemerataan kesempatan Belajar Universitas Indonesia (PPKB Paralel UI) yaitu salah satu jalur penerimaan yang di selenggarakan oleh UI yang menggunakan nilai raport tanpa test untuk siswa-siswi yang berminat melanjutkan pendidikan tingginya di Universitas Indonesia.</p>\r\n\r\n<p>Sedangkan 1 siswa SMAN 78 atas nama Rachmadana Fajri Majid juga merupakan salah satu siswa yang diterima di UI melalui jalur Talent Scouting, yaitu satu jalauryang diselenggarakan oleh kampus UI melalui jalur raport tanpa test untuk program Kleas Internasional.</p>\r\n\r\n<p>Satu hal lagi yang juga patut kita syukuri adalah Beberapa siswa SMAN 78 juga telah diterima di perguruan tinggi luar Negeri seperti Jepang, Kanada, dan belanda, baik melalaui jalur tes maupun beasiswa yang diselenggarakan oleh Pihak Universitas di Luar Negeri.</p>\r\n\r\n<p>Proses seleksi yang harus mereka lewati tidak hanya melalui nilai prestasi akademik tetapi juga prestasi non akademik, Kemampuan bahasa asing yang dibuktikan dengan sertifikat, penulisan Essay dan juga wawancara. Siswa-siswi tidak hanya berkompetisi dengan siswa dari dalam negeri saja tetapi mereka juga harus bersaing dengan pelajar seluruh dunia. Semoga sukses.</p>\r\n', '2020-02-05 09:24:42', 1, 'Pendidikan', 28, '4add43a5d93fc3ba8a81869127e11f99.jpg', 1, 'Muris Studio', 0, 'sejumlah-peserta-didik-sman-78-masuk-ptn-melalui-jalur-prestasi'),
-(22, 'UPACARA HARI LAHIR PANCASILA 1 JUNI DI SMAN 78 JAKARTA BERLANGSUNG KHIDMAD', '<p>Hari Sabtu, 1 Juni 2019 bertepatan dengan 27 Ramadhan 1440 H, SMA Negeri 78 Jakarta melaksanakan Upacara hari kelahiran Pancasila bertempat di lapangan sekolah.</p>\r\n\r\n<p>Ada yang menarik dari upacara kali ini karena pertama: bertepatan dengan bulan suci Ramadhan hari yang ke 27 dan beberapa guru maupun karyawan ada yang sudah pulang kampung halaman dalam menyambut hari raya Idul Fitri, kedua : Kepala sekolah meminta agar yang sudah pulang kampung ikut melaksanakan upacara di wilayah masing-masing dengan bergabung ke sekolah atau instansi terdekat.</p>\r\n\r\n<p>Mantap ternyata integritas tetap terjaga, anjuran dari Bapak Kepala Sekolah (Dr. Saryono, M.Si) dilaksanakan dengan penuh amanah terpantau beberapa guru dan karyawan SMAN 78 melaksanakan Upacara hari lahir pancasila di SMAN 6 Jogjakarta, SMAN 1 Gombong-jateng SMAN 2 PLG, SMAN 1 Leuwiliang Bogor, SMAN 1 Simo Boyolali, SMPN 1 Gombong, dan lain sebagainya. Laporan ini didapat dari bukti fisik berupa foto dan surat keterangan melaksanakan upacara yang ditandatangani oleh kepala sekolahnya.</p>\r\n\r\n<p>Mereka disambut dengan senang hati. Salah satu peserta upacara dari SMAN 78 Jakarta ( Ibu Yuliana Guru Kimia) yang upacara di SMAN 1 Simo Boyolali menuturkan &quot; Kami di sambut dengan sangat welcome, senang sekali rasanya&quot;. Di SMAN 78 Jakarta upacara juga berlangsung dengan khidmad, peserta upacara dari unsur pendidik, tenaga kependidikan dan peserta didik.</p>\r\n\r\n<p>Petugas pembina upacara Kepala Sekolah Dr. Saryono, Msi, petugas lainya dari unsur ekskul Paskib, Ekskul PKS dan Paduan Suara dengan menyanykan lagu Garuda pancasila dan Mars SMAN 78 Jakarta. Dalam sambutannya Kepala sekolah mengatakan &quot; Mari bersama-sama kita semua mengimplementasikan Pancasila dalam kehidupan sehari-hari sebagai wujud kecintaan kita pada NKRI dan Pancasila&quot;.</p>\r\n\r\n<p>&quot;Saya Indonesia&quot; peserta upacara menjawab&quot; Saya Pancasila &quot; kalimat penutup pembina upacara hari kelahiran Pancasila dan juga di akhiri dengan tepuk tangan seluruh peseta upacara. Sekian dan terima kasih.</p>\r\n', '2020-02-05 09:24:42', 3, 'Sains', 9, 'a49888c350ee1037ab856b95ac26aa03.jpg', 1, 'Muris Studio', 0, 'upacara-hari-lahir-pancasila-1-juni-di-sman-78-jakarta-berlangsung-khidmad'),
-(23, 'PELEPASAN PESERTA DIDIK KELAS XII ANGKATAN KE- 42', '<p>Kegiatan Pelepasan Peserta didik Kelas XII anggkatan KE 42 di laksanakan di Hotel Pullman Jakarta tanggal 13 Mei 2019 dalam suasana Bulan Ramadhan 1440 H.</p>\r\n\r\n<p><br />\r\nMeskipun dilaksanakan pada bulan puasa acara tetap berlangsung kidmad dan lancar. Acara pelepasan ini di hadiri oleh Kepala Suku Dinas Pendidikan Wilayah Jakarta Barat 2 Ibu Urip Asih, M.Pd, Pengawas SMAN 78 Ibu Hj.Nurul Muftahidah,M.Pd, Komite sekolah, Perwakilan Ikatan Alumni Sekolah (IAS), guru purna bhakti, dan orang tua siswa yang sangat berbahagia melihat putra putrinya lulus dari jenjang SMA dengan prestasi yang membanggakan.</p>\r\n\r\n<p>Dalam Sambutannya Kepala SMAN 78 Jakarta Dr. Saryono, M.si Mengatakan bahwa &quot;stakesholder Sekolah harus mampu melayani sepenuh hati untuk mendulang prestasi dan menjaga Prestasi&quot;.</p>\r\n\r\n<p>Tahun ini (Tahun pelajaran 2018/2019) Kita patut bersyukur karena banyak prestasi yang bisa diraih oleh SMAN 78 diantaranya: 87 siswa mendapat nilai 100, rangking 5 besar UN tingkat DKI Jakarta untuk program Ilmu-ilmu Sosial. Acara Pelepasan kelas XII ini Juga dimeriahkan oleh penampilan Ekskul Paduan suara, Tari, Marawis dan solo vokal.</p>\r\n\r\n<p>Ada yang beda dari pelaksanaan pelepasan tahun ini yang biasanya diselenggarakan di lapangan sekolah kali ini dilaksanakan di luar sekolah, tentu kegiatan ini didukung oleh orang tua siswa, komite serta Ikatan Alumni Sekolah.</p>\r\n', '2020-02-05 09:24:42', 5, 'Penelitian', 6, '217410a33b775e40cbdc57e079ce2b4c.jpg', 1, 'Muris Studio', 0, 'pelepasan-peserta-didik-kelas-xii-angkatan-ke--42'),
-(24, 'DUA SISWA SMA NEGERI 78 MENGIKUTI JAMBORE KEPANDUAN SEDUNIA KE- 24 DI VIRGINIA, AMERIKA SERIKAT', '<p>Raden Akbar Wira Dharma kelas XI MIPA E dan M. Raihan Adityaputra kelas XI MIPA C adalah dua siswa terbaik SMA Negeri 78 Jakarta mendapat kesempatan mengikuti kegiatan Jambore Kepanduan sedunia ke-24 tahun 2019. 24th World Scout Jamboree 2019 Kegiatan ini diikuti sekitar 50.000 peserta dari 170 negaradan teritori. Kegiatan jambore dunia ini di laksanakan dari tanggal 22 Juli sampai 2 Agustus 2019 bertempat di Summit Bechtel Reserve, West Virginia, Amerika Serikat.</p>\r\n\r\n<p>Kegiatan Kepanduan Jambore dunia ke- 24 ini mengangkat tema &#39;membuka kunci dunia&#39;. Semoga kegiatan ini memberikan pencerahan dalam dunia kepanduan dan masing-masing peserta memiliki kompetensi unggul dalam bidang kepramukaan sehingga punya kontribusi dalam memajukan kegiatan kepramukaan di sekolahnya. Kepal a SMA Negeri 78 Jakarta DR. Saryono, M.Si mengatakan&#39;Selamat untuk siswa dari 78 kalian tunas bangsa hebat bisa mengikuti Jambore dunia, raih pengalamn sebanyak-banyaknya dan bagikan kepada teman-teman yang lain , sehingga kegiatan kepramukaan di SMA Negeri 78 akan lebih baik&#39;.</p>\r\n', '2020-02-05 09:24:42', 6, 'Prestasi', 163, '9e67a59d62319ae27a5d7b87688faaf7.jpg', 1, 'Muris Studio', 0, 'dua-siswa-sma-negeri-78-mengikuti-jambore-kepanduan-sedunia-ke--24-di-virginia,-amerika-serikat'),
-(25, 'Membangun Mutu Pendidikan Melalui Kemitraan Sekolah', '<p>Lima hari di Malinau memberikan pengalaman yg menorehkan warna dalam hidupku.<br />\r\nTugas yg diberikan Kemendikbud satu persatu aku tunaikan. Hari pertama kunjungan ke SMAN 1 mendapat sambutan yg hangat penuh persahabatan, didahului upacara bendara dan tarian khas 4 budaya: Tidung,Bugis,Dayak Lundayeh,dan Dayak Kenya. Anak2 yg gagah dan cantik, menyajikan hiburan penuh kegembiraan.</p>\r\n\r\n<p>Hari kedua ke SMAN 3 dan hari ketiga ke SMAN 8 hampir sama tetapi tanpa tarian khas etnis Tidung dan Bugis. Namun tidak mengurangi kesemaraan seremonial pagi itu.</p>\r\n\r\n<p>Segenap warga sekolah tumpah di lapangan merasakan kegembiraan. Supervisi thd 2 guru matematika di dua sekolah yg berbeda memberi informasi bahwa pemerintah tidak boleh merasa lelah untuk terus memberi penguatan tentang konsep pembelajaran abad 21 dg dimensi :4C,Literasi dan Character Building.</p>\r\n\r\n<p>Di hari terakhir supervisi guru matemtika barulah saya mendapakan seorang guru muda, energik,suara lantang, menguasai konsep dan melakukan pendekatan pembelajaran yg mencerdaskan, membangun konsep, dg alat bantu yg kreatif, suasana kelas hidup, dan anak2 bahagia mengikuti pelajaran. Panggilan singkat guru muda tsb Pak Tri (30 ) terlihat menerapkan metode 4C, mengajak anak browsing (literasi), dan mengajak siswa bersyukur atas anugrah yg diberikan Tuhan ( membangun karakter ).</p>\r\n\r\n<p>Pemerintah melalui berbagai program harus terus membangun kompetensi profesional guru. Fokus penguatan tetap metode pada metide pembelajaran abad 21. Kurikulum 2013 dg pendekatan pembelajaran abad 21 diharapkan dpt mencerdaskan anak2 Indonesia.</p>\r\n', '2020-02-05 09:24:42', 1, 'Pendidikan', 22, '67b03f7b75700396f6ca684c052c83a9.jpg', 1, 'Muris Studio', 0, 'membangun-mutu-pendidikan-melalui-kemitraan-sekolah');
+(27, 'jgxhxhhgvn gxhfzxyr', '<p>lorem nvcjcjgcj&nbsp; jctxcut</p>\r\n', '2022-12-29 03:42:16', 1, 'Pendidikan', 0, 'af73e70e273852b4ad0e68d07c85d980.png', 2, 'kkk', 0, 'jgxhxhhgvn-gxhfzxyr');
 
 -- --------------------------------------------------------
 
@@ -538,26 +608,38 @@ INSERT INTO `tbl_video` (`id_video`, `id_mapel`, `kelas_id`, `kode_video`, `judu
 --
 
 --
--- Indeks untuk tabel `tbl_agenda`
+-- Indexes for table `tbl_agenda`
 --
 ALTER TABLE `tbl_agenda`
   ADD PRIMARY KEY (`agenda_id`);
 
 --
--- Indeks untuk tabel `tbl_album`
+-- Indexes for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
   ADD PRIMARY KEY (`album_id`),
   ADD KEY `album_pengguna_id` (`album_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_files`
+-- Indexes for table `tbl_banners`
+--
+ALTER TABLE `tbl_banners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_fasilitas`
+--
+ALTER TABLE `tbl_fasilitas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_files`
 --
 ALTER TABLE `tbl_files`
   ADD PRIMARY KEY (`file_id`);
 
 --
--- Indeks untuk tabel `tbl_galeri`
+-- Indexes for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
   ADD PRIMARY KEY (`galeri_id`),
@@ -565,81 +647,81 @@ ALTER TABLE `tbl_galeri`
   ADD KEY `galeri_pengguna_id` (`galeri_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_guru`
+-- Indexes for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   ADD PRIMARY KEY (`guru_id`);
 
 --
--- Indeks untuk tabel `tbl_inbox`
+-- Indexes for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
   ADD PRIMARY KEY (`inbox_id`);
 
 --
--- Indeks untuk tabel `tbl_kategori`
+-- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`kategori_id`);
 
 --
--- Indeks untuk tabel `tbl_kelas`
+-- Indexes for table `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   ADD PRIMARY KEY (`kelas_id`);
 
 --
--- Indeks untuk tabel `tbl_komentar`
+-- Indexes for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
   ADD PRIMARY KEY (`komentar_id`),
   ADD KEY `komentar_tulisan_id` (`komentar_tulisan_id`);
 
 --
--- Indeks untuk tabel `tbl_log_aktivitas`
+-- Indexes for table `tbl_log_aktivitas`
 --
 ALTER TABLE `tbl_log_aktivitas`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `log_pengguna_id` (`log_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_mapel`
+-- Indexes for table `tbl_mapel`
 --
 ALTER TABLE `tbl_mapel`
   ADD PRIMARY KEY (`id_mapel`);
 
 --
--- Indeks untuk tabel `tbl_pengguna`
+-- Indexes for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   ADD PRIMARY KEY (`pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_pengumuman`
+-- Indexes for table `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
   ADD PRIMARY KEY (`pengumuman_id`);
 
 --
--- Indeks untuk tabel `tbl_pengunjung`
+-- Indexes for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
   ADD PRIMARY KEY (`pengunjung_id`);
 
 --
--- Indeks untuk tabel `tbl_siswa`
+-- Indexes for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   ADD PRIMARY KEY (`siswa_id`);
 
 --
--- Indeks untuk tabel `tbl_testimoni`
+-- Indexes for table `tbl_testimoni`
 --
 ALTER TABLE `tbl_testimoni`
   ADD PRIMARY KEY (`testimoni_id`);
 
 --
--- Indeks untuk tabel `tbl_tulisan`
+-- Indexes for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
   ADD PRIMARY KEY (`tulisan_id`),
@@ -647,124 +729,110 @@ ALTER TABLE `tbl_tulisan`
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_video`
+-- Indexes for table `tbl_video`
 --
 ALTER TABLE `tbl_video`
   ADD PRIMARY KEY (`id_video`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_agenda`
+-- AUTO_INCREMENT for table `tbl_agenda`
 --
 ALTER TABLE `tbl_agenda`
-  MODIFY `agenda_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `agenda_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT untuk tabel `tbl_album`
+-- AUTO_INCREMENT for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT untuk tabel `tbl_files`
+-- AUTO_INCREMENT for table `tbl_fasilitas`
+--
+ALTER TABLE `tbl_fasilitas`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbl_files`
 --
 ALTER TABLE `tbl_files`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_galeri`
+-- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
+  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
--- AUTO_INCREMENT untuk tabel `tbl_guru`
+-- AUTO_INCREMENT for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
-  MODIFY `guru_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
+  MODIFY `guru_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT untuk tabel `tbl_inbox`
+-- AUTO_INCREMENT for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
   MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_kategori`
+-- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_kelas`
+-- AUTO_INCREMENT for table `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   MODIFY `kelas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_komentar`
+-- AUTO_INCREMENT for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
   MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_log_aktivitas`
+-- AUTO_INCREMENT for table `tbl_log_aktivitas`
 --
 ALTER TABLE `tbl_log_aktivitas`
   MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_mapel`
+-- AUTO_INCREMENT for table `tbl_mapel`
 --
 ALTER TABLE `tbl_mapel`
   MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengguna`
+-- AUTO_INCREMENT for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
-  MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengumuman`
+-- AUTO_INCREMENT for table `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
-  MODIFY `pengumuman_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `pengumuman_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengunjung`
+-- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=944;
-
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=958;
 --
--- AUTO_INCREMENT untuk tabel `tbl_siswa`
+-- AUTO_INCREMENT for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   MODIFY `siswa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_testimoni`
+-- AUTO_INCREMENT for table `tbl_testimoni`
 --
 ALTER TABLE `tbl_testimoni`
   MODIFY `testimoni_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_tulisan`
+-- AUTO_INCREMENT for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
-  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
--- AUTO_INCREMENT untuk tabel `tbl_video`
+-- AUTO_INCREMENT for table `tbl_video`
 --
 ALTER TABLE `tbl_video`
   MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
