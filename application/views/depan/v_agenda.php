@@ -18,7 +18,7 @@
                             <p><?php echo date("M Y", strtotime($row->agenda_tanggal)); ?></p>
                         </div>
                         <div class="event_info">
-                            <a href="event_details.html">
+                            <a href="#">
                                 <h4><?php echo $row->agenda_nama; ?></h4>
                             </a>
                             <p><?php echo $row->agenda_deskripsi; ?></p>
