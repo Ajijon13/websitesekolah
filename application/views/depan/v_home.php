@@ -37,7 +37,7 @@ function limit_words($string, $word_limit)
                 <img src="<?php echo 'style/img/banner/' . $b->photo; ?>" width="1100" height="200">
                 <div class="carousel-caption">
                     <h1 style="color: white;"><?php echo $b->title; ?></h1>
-                    <p style="color: white; font-weight='bold'"><?php echo $b->text; ?></p>
+                    <p style="color: white;"><?php echo $b->text; ?></p>
                 </div>
             </div>
         <?php } ?>
