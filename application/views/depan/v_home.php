@@ -106,47 +106,41 @@ function limit_words($string, $word_limit)
                 <br>
             </div>
         </div>
-
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row">
-
-                    <div class="cards">
-                        <div class="cardian cardian-1">
-                            <h2 class="cardian__title">English Day Activity</h2>
-                        </div>
-                        <div class="cardian cardian-2">
-                            <h2 class="cardian__title">Mandarin Class</h2>
-                        </div>
-                        <div class="cardian cardian-3">
-                            <h2 class="cardian__title">Parenting</h2>
-                        </div>
-                        <div class="cardian cardian-4">
-                            <h2 class="cardian__title">Character Building</h2>
-                        </div>
-                        <div class="cardian cardian-5">
-                            <h2 class="cardian__title">Budaya Kebhinekaan</h2>
-                        </div>
-                        <div class="cardian cardian-1">
-                            <h2 class="cardian__title">Pengembangan Bakat dan Minat</h2>
-                        </div>
-                        <div class="cardian cardian-2">
-                            <h2 class="cardian__title">Suasana Pembelajaran Kondusif</h2>
-                        </div>
-                        <div class="cardian cardian-3">
-                            <h2 class="cardian__title">Lingkungan Sekolah Yang Nyaman</h2>
-                        </div>
-                        <div class="cardian cardian-4">
-                            <h2 class="cardian__title">5 (Lima Hari Belajar)</h2>
-                        </div>
+                        <div class="cards">
+                            <div class="cardian cardian-1">
+                                <h2 class="cardian__title">English Day Activity</h2>
+                            </div>
+                            <div class="cardian cardian-2">
+                                <h2 class="cardian__title">Mandarin Class</h2>
+                            </div>
+                            <div class="cardian cardian-3">
+                                <h2 class="cardian__title">Parenting</h2>
+                            </div>
+                            <div class="cardian cardian-4">
+                                <h2 class="cardian__title">Character Building</h2>
+                            </div>
+                            <div class="cardian cardian-5">
+                                <h2 class="cardian__title">Budaya Kebhinekaan</h2>
+                            </div>
+                            <div class="cardian cardian-1">
+                                <h2 class="cardian__title">Pengembangan Bakat dan Minat</h2>
+                            </div>
+                            <div class="cardian cardian-2">
+                                <h2 class="cardian__title">Suasana Pembelajaran Kondusif</h2>
+                            </div>
+                            <div class="cardian cardian-3">
+                                <h2 class="cardian__title">Lingkungan Sekolah Yang Nyaman</h2>
+                            </div>
+                            <div class="cardian cardian-4">
+                                <h2 class="cardian__title">5 (Lima Hari Belajar)</h2>
+                            </div>
+                       
                     </div>
                     <br>
                     <br>
                     <br>
                     <br>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 
