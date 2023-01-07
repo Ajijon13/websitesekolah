@@ -15,7 +15,6 @@
 
     <div class="container-fluid">
 
-
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -126,10 +125,10 @@
 
     <!--Modal Edit Album-->
     <?php foreach ($data->result_array() as $i) :
-       $id = $i['id'];
-       $title = $i['title'];
-       $text = $i['text'];
-       $photo = $i['photo'];
+        $id = $i['id'];
+        $title = $i['title'];
+        $text = $i['text'];
+        $photo = $i['photo'];
     ?>
 
         <div class="modal fade" id="ModalEdit<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -144,10 +143,14 @@
                             <input type="hidden" name="kode" value="<?php echo $id; ?>" />
                             <input type="hidden" value="<?php echo $photo; ?>" name="gambar">
                             <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
-                                <label for="inputUserName" class="col-sm-4 control-label">Isi</label>
+                                <label for="inputUserName" class="col-sm-4 control-label">judul</label>
                                 <div class="col-sm-7">
                                     <input type="text" name="xtitle" class="form-control" value="<?php echo $title; ?>" id="inputUserName" placeholder="Keterangan" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputUserName" class="col-sm-4 control-label">Isi</label>
+                                <div class="col-sm-7">
                                     <input type="text" name="xtext" class="form-control" value="<?php echo $text; ?>" id="inputUserName" placeholder="Keterangan" required>
                                 </div>
                             </div>

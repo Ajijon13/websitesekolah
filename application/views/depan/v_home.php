@@ -7,49 +7,49 @@ function limit_words($string, $word_limit)
 ?>
 
 <style>
-  /* Make the image fully responsive */
-  .carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 
 <div id="demo" class="carousel slide" data-ride="carousel">
 
-	<!-- Indicators -->
-	<ul class="carousel-indicators">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
 
-		<?php $loop = 0;?>
-		<?php foreach($slide_banner as $b){ ?>
-		<?php $loop++;?>
-		<li data-target="#demo" data-slide-to="<?php echo ($loop-1); ?>" class="<?php if($loop === 1) echo 'active' ?>">
-		</li>
-		<?php } ?>
+        <?php $loop = 0; ?>
+        <?php foreach ($slide_banner as $b) { ?>
+            <?php $loop++; ?>
+            <li data-target="#demo" data-slide-to="<?php echo ($loop - 1); ?>" class="<?php if ($loop === 1) echo 'active' ?>">
+            </li>
+        <?php } ?>
 
-	</ul>
+    </ul>
 
-	<!-- The slideshow -->
-	<div class="carousel-inner">
-		<?php $loop = 0;?>
-		<?php foreach($slide_banner as $b){ ?>
-		<?php $loop++;?>
-		<div class="carousel-item <?php if($loop === 1) echo 'active' ?>">
-			<img src="<?php echo 'style/img/banner/'. $b->photo;?>" width="1100" height="500">
-            <div class="carousel-caption">
-                <h3><?php echo $b->title; ?></h3>
-                <p><?php echo $b->text; ?></p>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <?php $loop = 0; ?>
+        <?php foreach ($slide_banner as $b) { ?>
+            <?php $loop++; ?>
+            <div class="carousel-item <?php if ($loop === 1) echo 'active' ?>">
+                <img src="<?php echo 'style/img/banner/' . $b->photo; ?>" width="1100" height="200">
+                <div class="carousel-caption">
+                    <h1 style="color: white;"><?php echo $b->title; ?></h1>
+                    <p style="color: white; font-weight='bold'"><?php echo $b->text; ?></p>
+                </div>
             </div>
-		</div>
-		<?php } ?>
-	</div>
+        <?php } ?>
+    </div>
 
-	<!-- Left and right controls -->
-	<a class="carousel-control-prev" href="#demo" data-slide="prev">
-		<span class="carousel-control-prev-icon"></span>
-	</a>
-	<a class="carousel-control-next" href="#demo" data-slide="next">
-		<span class="carousel-control-next-icon"></span>
-	</a>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
 </div>
 
 <div class="recent_news_area section__padding">
@@ -67,7 +67,7 @@ function limit_words($string, $word_limit)
 
 
             <?php foreach ($berita->result() as $row) : ?>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="single__news">
                         <div class="thumb">
                             <a href="<?php echo site_url('artikel/' . $row->tulisan_slug); ?>">
@@ -93,6 +93,63 @@ function limit_words($string, $word_limit)
     </div>
 </div>
 <!--/ service_area_start  -->
+
+
+<!-- popular_program_area_start  -->
+<div class="popular_program_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title text-center">
+                    <h3>Program Unggulan</h3>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+
+                    <div class="cards">
+                        <div class="cardian cardian-1">
+                            <h2 class="cardian__title">English Day Activity</h2>
+                        </div>
+                        <div class="cardian cardian-2">
+                            <h2 class="cardian__title">Mandarin Class</h2>
+                        </div>
+                        <div class="cardian cardian-3">
+                            <h2 class="cardian__title">Parenting</h2>
+                        </div>
+                        <div class="cardian cardian-4">
+                            <h2 class="cardian__title">Character Building</h2>
+                        </div>
+                        <div class="cardian cardian-5">
+                            <h2 class="cardian__title">Budaya Kebhinekaan</h2>
+                        </div>
+                        <div class="cardian cardian-1">
+                            <h2 class="cardian__title">Pengembangan Bakat dan Minat</h2>
+                        </div>
+                        <div class="cardian cardian-2">
+                            <h2 class="cardian__title">Suasana Pembelajaran Kondusif</h2>
+                        </div>
+                        <div class="cardian cardian-3">
+                            <h2 class="cardian__title">Lingkungan Sekolah Yang Nyaman</h2>
+                        </div>
+                        <div class="cardian cardian-4">
+                            <h2 class="cardian__title">5 (Lima Hari Belajar)</h2>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- popular_program_area_start  -->
 <div class="popular_program_area">
@@ -176,5 +233,7 @@ function limit_words($string, $word_limit)
                 <?php endforeach; ?>
             </div>
         </div>
+        <br>
+        <br>
     </div>
 </div>

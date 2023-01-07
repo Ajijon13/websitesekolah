@@ -4,13 +4,12 @@
             return implode(" ",array_splice($words,0,$word_limit));
         }
     ?>
-<div class="bradcam_area" style="background-color: #1fc2d9;">
+<div class="bradcam_area" style="background-image:url('style/img/bg/bg 5.jpeg')">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
                         <h3>Berita Terkini</h3>
-                        <p>Masih Devlop</p>
                     </div>
                 </div>
             </div>

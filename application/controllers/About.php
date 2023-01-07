@@ -17,5 +17,7 @@ class About extends CI_Controller{
         
         $this->load->view('theme/template',$this->data);
 		
-	}
+	} 
 }
+
+

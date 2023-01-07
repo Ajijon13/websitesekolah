@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SD Pilar Nusantara</title>
+    <title>Lembaga Pendidikan Pilar Nusantara</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="<?php echo base_url('');?>style/css/slicknav.css">
     <link rel="stylesheet" href="<?php echo base_url('');?>style/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url('');?>style/css/about.css">    
+    <link rel="stylesheet" href="<?php echo base_url('');?>style/css/card-hover.css">
+    <link rel="stylesheet" href="<?php echo base_url('');?>style/css/wave.css">
+    <link rel="stylesheet" href="<?php echo base_url('');?>style/css/program.css">
     <link href="<?php echo base_url().'theme/css/dataTables.bootstrap4.min.css'?>" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>

@@ -1,112 +1,105 @@
 <style>
-  /* Hover CSS */
-  /* img {
-	filter: brightness(0) invert(1);
-	max-height: 120px;
-  } */
+  :root {
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+  }
 
-  .conta {
-    width: 1080px;
-    position: relative;
+
+  .hero-section {
+    align-items: flex-start;
     display: flex;
-    justify-content: space-between;
-  }
-
-  .conta .kard {
-    position: relative;
-  }
-
-  .conta .kard .kard-kontent {
-    width: 300px;
-    height: 280px;
-    transition: 0.4s;
-  }
-
-  .conta .kard .kard-kontent.kard-header {
-    position: relative;
-    background: #212121;
-    display: flex;
+    min-height: 100%;
     justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(140px);
+    padding: var(--spacing-xxl) var(--spacing-l);
   }
 
-  .conta .kard:hover .kard-kontent.kard-header {
-    transform: translateY(0);
+  .cardil-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
   }
 
-  .conta .kard.kard-style-1:hover .kard-kontent.kard-header {
-    background: #880e4f;
+  @media(min-width: 540px) {
+    .cardil-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .conta .kard.kard-style-2:hover .kard-kontent.kard-header {
-    background: #4a148c;
+  @media(min-width: 960px) {
+    .cardil-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
-  .conta .kard.kard-style-3:hover .kard-kontent.kard-header {
-    background: #311b92;
-  }
-
-  .conta .kard .kard-kontent.kard-header .kontent {
-    opacity: 0.3;
-    transition: 0.4s;
-  }
-
-  .conta .kard:hover .kard-kontent.kard-header .kontent {
-    opacity: 1;
-  }
-
-  .conta .kard .kard-kontent.kard-header .kontent h3 {
-    margin: 12px 0 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .conta .kard .kard-kontent.kard-body {
+  .cardil {
+    list-style: none;
     position: relative;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-    transform: translateY(-140px);
   }
 
-  .conta .kard:hover .kard-kontent.kard-body {
-    transform: translateY(0);
+  .cardil:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
   }
 
-  .conta .kard .kard-kontent.kard-body .kontent p {
-    margin: 0;
-    padding: 0;
+  .cardil__background {
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    trsnsform: scale(1) translateZ(0);
+    transition:
+      filter 200ms linear,
+      transform 200ms linear;
   }
 
-  .conta .kard .kard-kontent.kard-body .kontent a {
-    margin: 16px 0 0;
-    padding: 6px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 900;
+  .cardil:hover .cardil__background {
+    transform: scale(1.05) translateZ(0);
   }
 
-  .conta .kard.kard-style-1 .kard-kontent.kard-body .kontent a {
-    color: #880e4f;
-    border: 1px solid #880e4f;
+  .cardil-grid:hover>.cardil:not(:hover) .cardil__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
   }
 
-  .conta .kard .kard-kontent.kard-body .kontent a:hover {
-    background: #212121;
-    color: #fff;
-    border: 1px solid #212121;
+  .cardil__content {
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
   }
 
+  .cardil__category {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+  }
+
+  .cardil__heading {
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+  }
 </style>
-
 <div class="popular_program_area section__padding">
   <div class="container">
     <div class="row">
@@ -118,35 +111,38 @@
       </div>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="conta">
-          <?php foreach ($data->result() as $row) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="kard kard-style-1">
-                <div class="kard-kontent kard-header">
-                  <div class="kontent">
-                    <?php if (empty($row->foto)) : ?>
-                      <img src="<?php echo base_url() . 'assets/images/blank.png'; ?>" class="img-thumbnail" alt="<?php echo $row->ket; ?>">
-                    <?php else : ?>
-                      <img src="<?php echo 'style/img/fasilitas/' . $row->foto; ?>">
-                    <?php endif; ?>
-                  </div>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+        <div class="row">
+
+
+
+          <div class="cardil-grid">
+            <?php foreach ($data->result() as $row) : ?>
+              <a class="cardil" href="#">
+                <div class="cardil__background" style="background-image: url('<?php echo base_url() . 'style/img/fasilitas/' . $row->foto; ?>')">
                 </div>
-                <div class="kard-kontent kard-body">
-                  <div class="kontent">
-                    <p><?php echo $row->ket; ?></p>
-                  </div>
+                <div class="cardil__content">
+                  <h3 class="cardil__heading"><?php echo $row->ket; ?></h3>
                 </div>
-              </div>
-            </div>
-          <?php endforeach; ?>
+              </a>
+              <?php endforeach; ?>
+          </div>
+        
+
+
+
+
         </div>
 
+        <nav><?php echo $page; ?></nav>
 
-    
-      <div class="col-md-12 text-center">
-        <?php echo $page; ?>
+
       </div>
+
+
+
     </div>
 
 
