@@ -42,10 +42,6 @@ class Galeri extends CI_Controller{
 	                        $config['image_library']='gd2';
 	                        $config['source_image']='./assets/images/'.$gbr['file_name'];
 	                        $config['create_thumb']= FALSE;
-	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '60%';
-	                        $config['width']= 500;
-	                        $config['height']= 400;
 	                        $config['new_image']= './assets/images/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();
@@ -89,9 +85,6 @@ class Galeri extends CI_Controller{
 	                        $config['source_image']='./assets/images/'.$gbr['file_name'];
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '60%';
-	                        $config['width']= 500;
-	                        $config['height']= 400;
 	                        $config['new_image']= './assets/images/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();

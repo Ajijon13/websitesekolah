@@ -18,10 +18,45 @@
       <span>Dashboard</span></a>
   </li>
 
+
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url() . 'admin/prestasi' ?>">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
       <i class="fas fa-fw fa-address-book"></i>
-      <span>Data Prestasi</span></a>
+      <span>Prestasi</span>
+    </a>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/prestasisd' ?>">Prestasi SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/prestasismp' ?>">Prestasi SMP</a>
+      </div>
+    </div>
+  </li>
+
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-fw fa-address-book"></i>
+      <span>Ekstrakurikuler</span>
+    </a>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/ekstrasd' ?>">Ekstrakurikuler SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/ekstrasmp' ?>">Ekstrakurikuler SMP</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-fw fa-address-book"></i>
+      <span>Data Fasilitas</span>
+    </a>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/fasilitas' ?>">Fasilitas SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/fasilitassmp' ?>">Fasilitas SMP</a>
+      </div>
+    </div>
   </li>
 
   <li class="nav-item">
@@ -48,11 +83,6 @@
       <span>Data Pengumuman</span></a>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url() . 'admin/fasilitas' ?>">
-      <i class="fas fa-fw fa-address-book"></i>
-      <span>Data Fasilitas</span></a>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="<?php echo base_url() . 'admin/pengguna' ?>">
       <i class="fas fa-fw fa-users"></i>
@@ -81,14 +111,15 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Album Galeri</span>
+      <span>Galeri </span>
     </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" href="<?php echo base_url() . 'admin/album' ?>">Kategori Galeri</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/galeri' ?>">Foto Galeri</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/galeri' ?>">Foto Galeri SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/galerismp' ?>">Foto Galeri SMP</a>
       </div>
     </div>
   </li>

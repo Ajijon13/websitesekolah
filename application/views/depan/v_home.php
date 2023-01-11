@@ -52,20 +52,89 @@ function limit_words($string, $word_limit)
     </a>
 </div>
 
+
 <div class="recent_news_area section__padding">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
                 <div class="section_title text-center mb-70">
-                    <h3 class="mb-45">Berita Sekolah</h3>
+                    <h3 class="mb-45">Ekstrakurikuler</h3>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <section classs="testimonials">
+            <div class="container">
+                <div class="section_title text-center mb-70">
+                    <h2>SD PINUS</h2>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="customers-testimonials" class="owl-carousel">
+
+                            <!-- testimonial 1 -->
+                            <?php foreach ($ekstrasd->result() as $row) : ?>
+                                <div class="item">
+                                    <div class="shadow-effect">
+                                        <img class="img-circle" src="<?php echo base_url() . 'style/img/ekstrasd/' . $row->foto; ?>" alt="">
+                                    </div>
+                                    <div class="testimonial-name"><?php echo $row->ket; ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section classs="testi">
+            <div class="container">
+                <div class="container">
+                    <div class="section_title text-center mb-70">
+                        <br>
+                        <h2>SMP PINUS</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="customer-testimoni" class="owl-carousel">
+
+                                <!-- testimonial 1 -->
+                                <?php foreach ($ekstrasmp->result() as $row) : ?>
+                                    <div class="items">
+                                        <div class="shadows-effects">
+                                            <img class="img-circle" src="<?php echo base_url() . 'style/img/ekstrasmp/' . $row->foto; ?>" alt="">
+                                        </div>
+                                        <div class="testi-name"><?php echo $row->ket; ?></div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="recent_news_area section__padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="section_title text-center mb-70">
+                    <h3 class="mb-45">Berita Terkini</h3>
+                    <hr>
 
                 </div>
             </div>
         </div>
         <div class="row">
-
-
-
             <?php foreach ($berita->result() as $row) : ?>
                 <div class="col-md-4">
                     <div class="single__news">
@@ -106,41 +175,40 @@ function limit_words($string, $word_limit)
                 <br>
             </div>
         </div>
-                        <div class="cards">
-                            <div class="cardian cardian-1">
-                                <h2 class="cardian__title">English Day Activity</h2>
-                            </div>
-                            <div class="cardian cardian-2">
-                                <h2 class="cardian__title">Mandarin Class</h2>
-                            </div>
-                            <div class="cardian cardian-3">
-                                <h2 class="cardian__title">Parenting</h2>
-                            </div>
-                            <div class="cardian cardian-4">
-                                <h2 class="cardian__title">Character Building</h2>
-                            </div>
-                            <div class="cardian cardian-5">
-                                <h2 class="cardian__title">Budaya Kebhinekaan</h2>
-                            </div>
-                            <div class="cardian cardian-1">
-                                <h2 class="cardian__title">Pengembangan Bakat dan Minat</h2>
-                            </div>
-                            <div class="cardian cardian-2">
-                                <h2 class="cardian__title">Suasana Pembelajaran Kondusif</h2>
-                            </div>
-                            <div class="cardian cardian-3">
-                                <h2 class="cardian__title">Lingkungan Sekolah Yang Nyaman</h2>
-                            </div>
-                            <div class="cardian cardian-4">
-                                <h2 class="cardian__title">5 (Lima Hari Belajar)</h2>
-                            </div>
-                       
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-        
+        <div class="cards">
+            <div class="cardian cardian-1">
+                <h2 class="cardian__title">English Day Activity</h2>
+            </div>
+            <div class="cardian cardian-2">
+                <h2 class="cardian__title">Mandarin Class</h2>
+            </div>
+            <div class="cardian cardian-3">
+                <h2 class="cardian__title">Parenting</h2>
+            </div>
+            <div class="cardian cardian-4">
+                <h2 class="cardian__title">Character Building</h2>
+            </div>
+            <div class="cardian cardian-5">
+                <h2 class="cardian__title">Budaya Kebhinekaan</h2>
+            </div>
+            <div class="cardian cardian-1">
+                <h2 class="cardian__title">Pengembangan Bakat dan Minat</h2>
+            </div>
+            <div class="cardian cardian-2">
+                <h2 class="cardian__title">Suasana Pembelajaran Kondusif</h2>
+            </div>
+            <div class="cardian cardian-3">
+                <h2 class="cardian__title">Lingkungan Sekolah Yang Nyaman</h2>
+            </div>
+            <div class="cardian cardian-4">
+                <h2 class="cardian__title">5 (Lima Hari Belajar)</h2>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </div>
 </div>
 
