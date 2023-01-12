@@ -15,7 +15,6 @@
 
     <div class="container-fluid">
 
-
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -23,17 +22,22 @@
             </div>
             <div class="card-body">
 
+                <div class="box-header">
+                    <a href="#" class="btn btn-success btn-flat" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus"></span> Profil</a>
+                </div>
+
                 <br>
 
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Visi</th>
-                                <th>Misi</th>
-                                <th>Sejarah</th>
-                                <th>Aksi</th>
+                                <th>Gambar</th>
+                                <th>sambutan</th>
+                                <th>visi</th>
+                                <th>misi</th>
+                                <th>sejarah</th>
+                                <th style="text-align:right;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,26 +45,29 @@
                             $no = 0;
                             foreach ($data->result_array() as $i) :
                                 $no++;
-                                $id_pengaturan = $i['id_pengaturan'];
+                                $id = $i['id'];
+                                $sambutan = $i['sambutan'];
                                 $visi = $i['visi'];
                                 $misi = $i['misi'];
                                 $sejarah = $i['sejarah'];
+                                $foto = $i['foto'];
                             ?>
                                 <tr>
-                                    <td><?php echo $id_pengaturan; ?> </td>
+                                    <td><img src="<?php echo base_url() . 'style/img/pengaturan/' . $foto; ?>" style="width:80px;"></td>
+                                    <td><?php echo $sambutan; ?></td>
                                     <td><?php echo $visi; ?></td>
                                     <td><?php echo $misi; ?></td>
                                     <td><?php echo $sejarah; ?></td>
-                                    <td>
+                                    <td style="text-align:right;">
 
-                                        <a href="#" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#ModalEdit<?php echo $id_pengaturan; ?>">
+                                        <a href="#" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#ModalEdit<?php echo $id; ?>">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-info-circle"></i>
                                             </span>
                                             <span class="text">Edit</span>
                                         </a>
 
-                                        <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#ModalHapus<?php echo $id_pengaturan; ?>">
+                                        <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#ModalHapus<?php echo $id; ?>">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-trash"></i>
                                             </span>
@@ -68,12 +75,12 @@
                                         </a>
 
 
-
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+
 
 
                 </div>
@@ -87,33 +94,46 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                    <h4 class="modal-title" id="myModalLabel">Add Profil</h4>
+                    <h4 class="modal-title" id="myModalLabel">Add profil</h4>
                 </div>
                 <form class="form-horizontal" action="<?php echo base_url() . 'admin/pengaturan/simpan_pengaturan' ?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 
                         <div class="form-group">
+                            <label for="inputUserName" class="col-sm-4 control-label">Sambutan</label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="xsambutan" rows="4" id="inputUserName" placeholder="keterangan" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="inputUserName" class="col-sm-4 control-label">Visi</label>
-                            <div class="col-sm-7">
-                                <textarea class="form-control" rows="3" name="xvisi" placeholder="Isi" required></textarea>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="xvisi" rows="4" id="inputUserName" placeholder="keterangan" required></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="inputUserName" class="col-sm-4 control-label">Misi</label>
-                            <div class="col-sm-7">
-                                <textarea class="form-control" rows="3" name="xmisi" placeholder="Isi" required></textarea>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="xmisi" rows="4" id="inputUserName" placeholder="keterangan" required></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="inputUserName" class="col-sm-4 control-label">Sejarah</label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="xsejarah"  rows="4" id="inputUserName" placeholder="keterangan" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputUserName" class="col-sm-4 control-label"></label>
                             <div class="col-sm-7">
-                                <textarea class="form-control" rows="3" name="xsejarah" placeholder="isi" required></textarea>
+                                <input type="file" name="filefoto" required />
                             </div>
                         </div>
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
@@ -123,15 +143,18 @@
         </div>
     </div>
 
-
+    <!--Modal Edit Album-->
     <?php foreach ($data->result_array() as $i) :
-        $id_pengaturan = $i['id_pengaturan'];
+        $id = $i['id'];
+        $sambutan = $i['sambutan'];
         $visi = $i['visi'];
         $misi = $i['misi'];
         $sejarah = $i['sejarah'];
+        $foto = $i['foto'];
     ?>
-        <!--Modal Edit -->
-        <div class="modal fade" id="ModalEdit<?php echo $id_pengaturan; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+
+        <div class="modal fade" id="ModalEdit<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -140,48 +163,64 @@
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url() . 'admin/pengaturan/update_pengaturan' ?>" method="post" enctype="multipart/form-data">
                         <div class="modal-body">
-
+                            <input type="hidden" name="kode" value="<?php echo $id; ?>" />
+                            <input type="hidden" value="<?php echo $foto; ?>" name="gambar">
+                            <div class="form-group">
+                                <label for="inputUserName" class="col-sm-4 control-label">Sambutan</label>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" name="xsambutan" id="inputUserName" placeholder="keterangan" required><?php echo $sambutan; ?></textarea>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">Visi</label>
-                                <div class="col-sm-12">
-                                    <input type="hidden" name="kode" value="<?php echo $id_pengaturan; ?>" />
-                                    <textarea class="form-control" rows="3" name="xvisi" placeholder="Deskripsi ..." required><?php echo $visi; ?></textarea>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" name="xvisi" id="inputUserName" placeholder="keterangan" required><?php echo $visi; ?></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">Misi</label>
-                                <div class="col-sm-12">
-                                    <textarea class="form-control" rows="3" name="xmisi" placeholder="Deskripsi ..." required><?php echo $misi; ?></textarea>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" name="xmisi" id="inputUserName" placeholder="keterangan" required><?php echo $misi; ?></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">Sejarah</label>
-                                <div class="col-sm-12">
-                                    <textarea class="form-control" rows="6" name="xsejarah" placeholder="Deskripsi ..." required><?php echo $sejarah; ?></textarea>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" name="xsejarah" id="inputUserName" placeholder="keterangan" required><?php echo $sejarah; ?></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputUserName" class="col-sm-4 control-label">Gambar</label>
+                                <div class="col-sm-7">
+                                    <input type="file" name="filefoto" />
                                 </div>
                             </div>
 
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary btn-flat" id="simpan">Update</button>
+                            <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     <?php endforeach; ?>
+    <!--Modal Edit Album-->
 
     <?php foreach ($data->result_array() as $i) :
-        $id_pengaturan = $i['id_pengaturan'];
+        $id = $i['id'];
+        $sambutan = $i['sambutan'];
         $visi = $i['visi'];
         $misi = $i['misi'];
         $sejarah = $i['sejarah'];
+        $foto = $i['foto'];
     ?>
-        <!--Modal Hapus -->
-        <div class="modal fade" id="ModalHapus<?php echo $id_pengaturan; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!--Modal Hapus Pengguna-->
+        <div class="modal fade" id="ModalHapus<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -190,8 +229,9 @@
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url() . 'admin/pengaturan/hapus_pengaturan' ?>" method="post" enctype="multipart/form-data">
                         <div class="modal-body">
-                            <input type="hidden" name="kode" value="<?php echo $id_pengaturan; ?>" />
-                            <p>Apakah Anda yakin mau menghapus Pengguna <b><?php echo $visi; ?></b> ?</p>
+                            <input type="hidden" name="kode" value="<?php echo $id; ?>" />
+                            <input type="hidden" value="<?php echo $foto; ?>" name="photo">
+                            <p>Apakah Anda yakin mau menghapus Posting <b><?php echo $sambutan; ?></b> ?</p>
 
                         </div>
                         <div class="modal-footer">

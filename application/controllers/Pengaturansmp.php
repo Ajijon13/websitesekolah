@@ -1,25 +1,21 @@
 <?php
-class Pengaturan extends CI_Controller{
+class Pengaturansmp extends CI_Controller{
 	function __construct(){
 		parent::__construct();
-		$this->load->model('pengaturan_model');
 		$this->load->model('pengaturansmp_model');
 		$this->load->model('m_pengunjung');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
-        
-		$this->data['pengaturansmp']=$this->pengaturansmp_model->get_pengaturansmp_home();
-
-		$jum=$this->pengaturan_model->pengaturan();
+		$jum=$this->pengaturansmp_model->pengaturansmp();
         $page=$this->uri->segment(3);
         if(!$page):
             $offset = 0;
         else:
             $offset = $page;
         endif;
-        $limit=8;
-        $config['base_url'] = base_url() . 'pengaturan/index/';
+        $limit=7;
+        $config['base_url'] = base_url() . 'pengaturansmp/index/';
             $config['total_rows'] = $jum->num_rows();
             $config['per_page'] = $limit;
             $config['uri_segment'] = 3;
@@ -38,17 +34,19 @@ class Pengaturan extends CI_Controller{
 	          $config['first_tagl_close'] = '</span></li>';
 	          $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
 	          $config['last_tagl_close']  = '</span></li>';
-
             $config['first_link'] = 'Awal';
             $config['last_link'] = 'Akhir';
             $config['next_link'] = 'Next >>';
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
-        
             $this->data['page'] =$this->pagination->create_links();
-            $this->data['data']=$this->pengaturan_model->pengaturan_perpage($offset,$limit);
-            $this->data['main_view']   = 'depan/v_pengaturan';
+		      $this->data['data']=$this->pengaturansmp_model->pengaturansmp_perpage($offset,$limit);
+        
+            $this->data['main_view']   = 'depan/v_pengaturansmp';
+        
             $this->load->view('theme/template',$this->data);
+        
+		      
 	}
 
 }

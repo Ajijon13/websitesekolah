@@ -80,10 +80,6 @@ class Banner extends CI_Controller
 				$config['image_library'] = 'gd2';
 				$config['source_image'] = './style/img/banner/' . $gbr['file_name'];
 				$config['create_thumb'] = FALSE;
-				$config['maintain_ratio'] = FALSE;
-				$config['quality'] = '100%';
-				$config['width'] = 300;
-				$config['height'] = 300;
 				$config['new_image'] = './style/img/banner/' . $gbr['file_name'];
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();

@@ -5,7 +5,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-user"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">SD Pilar Nusantara</div>
+    <div class="sidebar-brand-text mx-3">Lembaga Pendidikan Pinus</div>
   </a>
 
   <!-- Divider -->
@@ -17,7 +17,34 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
+  <!-- Nav Item - Pages Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSiji" aria-expanded="true" aria-controls="collapseSiji">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Berita</span>
+    </a>
+    <div id="collapseSiji" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/tulisan' ?>">List Berita</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/tulisan/add_tulisan' ?>">Pos Berita</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/kategori' ?>">Kategori Berita</a>
+      </div>
+    </div>
+  </li>
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Galeri </span>
+    </a>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/album' ?>">Kategori Galeri</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/galeri' ?>">Foto Galeri SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/galerismp' ?>">Foto Galeri SMP</a>
+      </div>
+    </div>
+  </li>
 
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -60,6 +87,19 @@
   </li>
 
   <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Profil </span>
+    </a>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturan' ?>">Profil SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturansmp' ?>">Profil SMP</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
     <a class="nav-link" href="<?php echo base_url() . 'admin/guru' ?>">
       <i class="fas fa-fw fa-address-book"></i>
       <span>Data Guru</span></a>
@@ -88,41 +128,22 @@
       <i class="fas fa-fw fa-users"></i>
       <span>Data User</span></a>
   </li>
+
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo base_url() . 'admin/pengaturan' ?>">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseTwo">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Data Profil</span></a>
+      <span>Profil </span>
+    </a>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturan' ?>">Profil SD</a>
+        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturansmp' ?>">Profil SMP</a>
+      </div>
+    </div>
   </li>
   <!-- Divider -->
 
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSiji" aria-expanded="true" aria-controls="collapseSiji">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Berita</span>
-    </a>
-    <div id="collapseSiji" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/tulisan' ?>">List Berita</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/tulisan/add_tulisan' ?>">Pos Berita</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/kategori' ?>">Kategori Berita</a>
-      </div>
-    </div>
-  </li>
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Galeri </span>
-    </a>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/album' ?>">Kategori Galeri</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/galeri' ?>">Foto Galeri SD</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/galerismp' ?>">Foto Galeri SMP</a>
-      </div>
-    </div>
-  </li>
 
 
   <!-- Nav Item - Tables -->
