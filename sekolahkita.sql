@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 02 Jan 2023 pada 14.57
--- Versi Server: 10.1.19-MariaDB
+-- Generation Time: Jan 12, 2023 at 03:59 AM
+-- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_agenda`
+-- Table structure for table `tbl_agenda`
 --
 
 CREATE TABLE `tbl_agenda` (
@@ -40,7 +40,7 @@ CREATE TABLE `tbl_agenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_agenda`
+-- Dumping data for table `tbl_agenda`
 --
 
 INSERT INTO `tbl_agenda` (`agenda_id`, `agenda_nama`, `agenda_tanggal`, `agenda_deskripsi`, `agenda_mulai`, `agenda_selesai`, `agenda_tempat`, `agenda_waktu`, `agenda_keterangan`, `agenda_author`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `tbl_agenda` (`agenda_id`, `agenda_nama`, `agenda_tanggal`, `agenda_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_album`
+-- Table structure for table `tbl_album`
 --
 
 CREATE TABLE `tbl_album` (
@@ -63,16 +63,17 @@ CREATE TABLE `tbl_album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_album`
+-- Dumping data for table `tbl_album`
 --
 
 INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`) VALUES
-(5, 'ffff', '2022-12-29 03:44:06', 2, 'kkk', 1, '92732b603ebd37a85d1cfad525895c67.png');
+(5, 'ffff', '2022-12-29 03:44:06', 2, 'kkk', 1, '92732b603ebd37a85d1cfad525895c67.png'),
+(6, 'SD', '2023-01-10 07:48:22', 1, 'Ajijon', 1, 'fde699f1417ac251dbfbc35e7a96349b.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_banners`
+-- Table structure for table `tbl_banners`
 --
 
 CREATE TABLE `tbl_banners` (
@@ -83,18 +84,58 @@ CREATE TABLE `tbl_banners` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_banners`
+-- Dumping data for table `tbl_banners`
 --
 
 INSERT INTO `tbl_banners` (`id`, `title`, `text`, `photo`) VALUES
-(0, 'NAsi Adalah SEBUAH KARBOHIDRAT', 'AKu Makan Nasi', 'adb2a71cf4c59dbd387bbf5b798ced68.jpeg'),
-(2, 'SMK MUHAMMADIYAH 09 PACIRAN ', 'Beprestasi , Berakhlak , Sopan dan Santun ', '736c498e7ed4b42f086d535fed871db1.jpg'),
-(3, 'SMK MUHAMMADIYAH 09 PACIRAN  2', 'Beprestasi , Berakhlak , Sopan dan Santun ', '736c498e7ed4b42f086d535fed871db1.jpg');
+(4, 'Wisuda', 'sehat dan kuat', '213c0530655ade93637e0d3b5dbbeace.jpg'),
+(5, 'Aaaaaaaaaaaaaa', 'bbbbbbbbbbbbbbbb', '7983eab5a162b3dadbed11ae153158f4.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_fasilitas`
+-- Table structure for table `tbl_ekstrasd`
+--
+
+CREATE TABLE `tbl_ekstrasd` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(100) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_ekstrasd`
+--
+
+INSERT INTO `tbl_ekstrasd` (`id`, `ket`, `foto`) VALUES
+(1, 'ECC (English Converstaion Club)', '7f492bbd6e706883c365f7478dc5d9e5.jpeg'),
+(2, 'kakakakka', 'e0fbb9c3b49c0e09e83f1a0267d9d653.jpg'),
+(3, 'aaaaaa', '4afcfe874aa839162638b5c563d6cf25.jpeg'),
+(4, 'MCC (Mandarin Conversation Club)', '04c8d2bca28c9e60f743834d22358fa5.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_ekstrasmp`
+--
+
+CREATE TABLE `tbl_ekstrasmp` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_ekstrasmp`
+--
+
+INSERT INTO `tbl_ekstrasmp` (`id`, `ket`, `foto`) VALUES
+(1, 'Juara 1 lomba pidato', '8baa0a469c115ca597608cfc99b235df.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_fasilitas`
 --
 
 CREATE TABLE `tbl_fasilitas` (
@@ -104,52 +145,32 @@ CREATE TABLE `tbl_fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_fasilitas`
+-- Dumping data for table `tbl_fasilitas`
 --
 
 INSERT INTO `tbl_fasilitas` (`id`, `ket`, `foto`) VALUES
 (1, 'Labotarium Komputer', 'b32e6036a961ee60093d1e57faed4eda.jpg'),
 (2, 'bbbbbbbbbbbbbbb', '000f23940c94881193e19677defe3273.jpg'),
 (3, 'Lapangan Sekolah', 'f469c2387408c4c4f0a77f5ffbc1df66.jpeg'),
-(4, 'Bangunan Sekolah', '7361ca3d02ecf76801d35f2434175769.jpeg');
+(4, 'Bangunan Sekolah', '7361ca3d02ecf76801d35f2434175769.jpeg'),
+(5, 'admin', '63a134836863714f9c250e79f39ee0f3.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_files`
+-- Table structure for table `tbl_fasilitassmp`
 --
 
-CREATE TABLE `tbl_files` (
-  `file_id` int(11) NOT NULL,
-  `file_judul` varchar(120) DEFAULT NULL,
-  `file_deskripsi` text,
-  `file_tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `file_oleh` varchar(60) DEFAULT NULL,
-  `file_download` int(11) DEFAULT '0',
-  `file_data` varchar(120) DEFAULT NULL
+CREATE TABLE `tbl_fasilitassmp` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `tbl_files`
---
-
-INSERT INTO `tbl_files` (`file_id`, `file_judul`, `file_deskripsi`, `file_tanggal`, `file_oleh`, `file_download`, `file_data`) VALUES
-(2, 'Dasar-dasar CSS', 'Modul dasar-dasar CSS 3. Modul ini membantu anda untuk memahami struktur dasar CSS', '2017-01-23 04:30:01', 'Drs. Joko', 0, 'ab9a183ff240deadbedaff78e639af2f.pdf'),
-(3, '14 Teknik Komunikasi Yang Paling Efektif', 'Ebook 14 teknik komunikasi paling efektif membantu anda untuk berkomunikasi dengan baik dan benar', '2017-01-23 15:26:06', 'Drs. Joko', 0, 'ab2cb34682bd94f30f2347523112ffb9.pdf'),
-(4, 'Bagaimana Membentuk Pola Pikir yang Baru', 'Ebook ini membantu anda membentuk pola pikir baru.', '2017-01-23 15:27:07', 'Drs. Joko', 0, '30f588eb5c55324f8d18213f11651855.pdf'),
-(5, '7 Tips Penting mengatasi Kritik', '7 Tips Penting mengatasi Kritik', '2017-01-23 15:27:44', 'Drs. Joko', 0, '329a62b25ad475a148e1546aa3db41de.docx'),
-(6, '8 Racun dalam kehidupan kita', '8 Racun dalam kehidupan kita', '2017-01-23 15:28:17', 'Drs. Joko', 0, '8e38ad4948ba13758683dea443fbe6be.docx'),
-(7, 'Jurnal Teknolgi Informasi', 'Jurnal Teknolgi Informasi', '2017-01-25 03:18:53', 'Gunawan, S.Pd', 0, '87ae0f009714ddfdd79e2977b2a64632.pdf'),
-(8, 'Jurnal Teknolgi Informasi 2', 'Jurnal Teknolgi Informasi', '2017-01-25 03:19:22', 'Gunawan, S.Pd', 0, 'c4e966ba2c6e142155082854dc5b3602.pdf'),
-(9, 'Naskah Publikasi IT', 'Naskah Teknolgi Informasi', '2017-01-25 03:21:04', 'Gunawan, S.Pd', 0, '71380b3cf16a17a02382098c028ece9c.pdf'),
-(10, 'Modul Teknologi Informasi', 'Modul Teknologi Informasi', '2017-01-25 03:22:08', 'Gunawan, S.Pd', 0, '029143a3980232ab2900d94df36dbb0c.pdf'),
-(11, 'Modul Teknologi Informasi Part II', 'Modul Teknologi Informasi', '2017-01-25 03:22:54', 'Gunawan, S.Pd', 0, 'ea8f3f732576083156e509657614f551.pdf'),
-(12, 'Modul Teknologi Informasi Part III', 'Modul Teknologi Informasi', '2017-01-25 03:23:21', 'Gunawan, S.Pd', 0, 'c5e5e7d16e4cd6c3d22c11f64b0db2af.pdf');
-
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_galeri`
+-- Table structure for table `tbl_galeri`
 --
 
 CREATE TABLE `tbl_galeri` (
@@ -163,31 +184,40 @@ CREATE TABLE `tbl_galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_galeri`
+-- Dumping data for table `tbl_galeri`
 --
 
 INSERT INTO `tbl_galeri` (`galeri_id`, `galeri_judul`, `galeri_tanggal`, `galeri_gambar`, `galeri_album_id`, `galeri_pengguna_id`, `galeri_author`) VALUES
-(4, 'Diskusi Pemilihan Ketua Osis', '2017-01-21 14:04:53', '5f8436e2c30570dfe2114f05af5e9215.jpg', 3, 1, 'Muris Studio'),
-(5, 'Panitia Pemilu Osis', '2017-01-22 04:13:20', '504cd9e83e047becee6ec32e4af7e534.jpg', 3, 1, 'Muris Studio'),
-(6, 'Proses Pemilu Osis', '2017-01-22 04:13:43', '83f7e70d0f89f2d8a7695e5f7059418f.jpg', 3, 1, 'Muris Studio'),
-(7, 'Belajar dengan native speaker', '2017-01-24 01:26:22', 'd884f7fe18efebd07d7725ecf3bf3481.jpg', 1, 1, 'Muris Studio'),
-(8, 'Diskusi dengan native speaker', '2017-01-24 01:27:05', 'f652521a6c283c2df9da808cc4aae1c6.jpg', 1, 1, 'Muris Studio'),
-(9, 'Foto bareng native speaker', '2017-01-24 01:27:28', '69fc9bf961e3aac2fc79af00922b3933.png', 1, 1, 'Muris Studio'),
-(10, 'Foto bareng native speaker', '2017-01-24 01:28:40', '853f2d57da50c6f516944a6cec68c694.jpg', 1, 1, 'Muris Studio'),
-(11, 'Foto bareng native speaker', '2017-01-24 01:28:54', 'f92d6de4457a33e5a1d957b0e3d20335.jpg', 1, 1, 'Muris Studio'),
-(12, 'Belajar sambil bermain', '2017-01-24 01:31:42', '5e3c09430ba03b2e60de6c06c6dbafec.jpg', 4, 1, 'Muris Studio'),
-(13, 'Belajar sambil bermain', '2017-01-24 01:31:55', 'e4d51d428be01628693b4bff4e453463.jpg', 4, 1, 'Muris Studio'),
-(14, 'Belajar komputer programming', '2017-01-24 01:32:24', 'a23dcd7e6b129257fd03d7198fe1bb49.jpg', 4, 1, 'Muris Studio'),
-(15, 'Belajar komputer programming', '2017-01-24 01:32:34', 'cf0585d2d5a627639ef4ed48beab65c2.jpg', 4, 1, 'Muris Studio'),
-(16, 'Belajar komputer programming', '2017-01-24 01:32:44', 'e53b596a6a821179169c647ffdaebd10.jpg', 4, 1, 'Muris Studio'),
-(17, 'Belajar sambil bermain', '2017-01-24 01:33:08', 'e8ec9657a6c5ff5eea059785c949b5ce.jpg', 4, 1, 'Muris Studio'),
-(18, 'Makan bersama', '2017-01-24 01:33:24', 'a92df7b3e7a8488f0e8ca186e6551194.jpg', 4, 1, 'Muris Studio'),
-(19, 'Foto Bersama', '2022-12-29 03:44:36', '2ba5111001f1c06f7570fa5bb9d650bf.jpg', 5, 2, 'kkk');
+(20, 'Halo', '2023-01-10 07:48:40', 'ffa2c06495e1db3bfcbb9968f6b8f44c.jpeg', 6, 1, 'Ajijon');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_guru`
+-- Table structure for table `tbl_galerismp`
+--
+
+CREATE TABLE `tbl_galerismp` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_galerismp`
+--
+
+INSERT INTO `tbl_galerismp` (`id`, `ket`, `foto`) VALUES
+(1, 'foto yeyeye', 'bb8eb56d45e9c50083e7e9d4e2932973.jpg'),
+(2, 'aaaaaaaaaaaaa', '366ae79183ff479cdeb5daff4f710be4.jpg'),
+(3, 'aaaaaaaaaaa', '51814e1d8030e8bbcf31d6789032a67a.jpeg'),
+(4, 'aabb', 'b650b0dc0bd8a40260b6a9a010da8613.jpeg'),
+(5, 'Lab Komputer', '26af4d3fc3cfdedd178a445a660f247a.jpeg'),
+(6, 'aaaaaaaaaaa', '61ec1b66e1ea19bdc49509939c4e9cc6.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_guru`
 --
 
 CREATE TABLE `tbl_guru` (
@@ -203,7 +233,7 @@ CREATE TABLE `tbl_guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_guru`
+-- Dumping data for table `tbl_guru`
 --
 
 INSERT INTO `tbl_guru` (`guru_id`, `guru_nip`, `guru_nama`, `guru_jenkel`, `guru_tmp_lahir`, `guru_tgl_lahir`, `guru_mapel`, `guru_photo`, `guru_tgl_input`) VALUES
@@ -213,34 +243,7 @@ INSERT INTO `tbl_guru` (`guru_id`, `guru_nip`, `guru_nama`, `guru_jenkel`, `guru
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_inbox`
---
-
-CREATE TABLE `tbl_inbox` (
-  `inbox_id` int(11) NOT NULL,
-  `inbox_nama` varchar(40) DEFAULT NULL,
-  `inbox_email` varchar(60) DEFAULT NULL,
-  `inbox_kontak` varchar(20) DEFAULT NULL,
-  `inbox_pesan` text,
-  `inbox_tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `inbox_status` int(11) DEFAULT '1' COMMENT '1=Belum dilihat, 0=Telah dilihat'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tbl_inbox`
---
-
-INSERT INTO `tbl_inbox` (`inbox_id`, `inbox_nama`, `inbox_email`, `inbox_kontak`, `inbox_pesan`, `inbox_tanggal`, `inbox_status`) VALUES
-(2, 'M Fikri Setiadi', 'fikrifiver97@gmail.com', '-', 'Ping !', '2017-06-21 03:44:12', 0),
-(3, 'M Fikri Setiadi', 'fikrifiver97@gmail.com', '-', 'Ini adalah pesan ', '2017-06-21 03:45:57', 0),
-(5, 'M Fikri Setiadi', 'fikrifiver97@gmail.com', '-', 'Ping !', '2017-06-21 03:53:19', 0),
-(7, 'M Fikri Setiadi', 'fikrifiver97@gmail.com', '-', 'Hi, there!', '2017-07-01 07:28:08', 0),
-(8, 'M Fikri', 'fikrifiver97@gmail.com', '084375684364', 'Hi There, Would you please help me about register?', '2018-08-06 13:51:07', 0);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tbl_kategori`
+-- Table structure for table `tbl_kategori`
 --
 
 CREATE TABLE `tbl_kategori` (
@@ -250,85 +253,17 @@ CREATE TABLE `tbl_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kategori`
+-- Dumping data for table `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) VALUES
 (1, 'Pendidikan', '2016-09-06 05:49:04'),
-(2, 'Politik', '2016-09-06 05:50:01'),
-(3, 'Sains', '2016-09-06 05:59:39'),
-(5, 'Penelitian', '2016-09-06 06:19:26'),
-(6, 'Prestasi', '2016-09-07 02:51:09'),
 (13, 'Olah Raga', '2017-01-13 13:20:31');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kelas`
---
-
-CREATE TABLE `tbl_kelas` (
-  `kelas_id` int(11) NOT NULL,
-  `kelas_nama` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tbl_kelas`
---
-
-INSERT INTO `tbl_kelas` (`kelas_id`, `kelas_nama`) VALUES
-(1, 'Kelas X.1'),
-(2, 'Kelas X.2'),
-(3, 'Kelas X.3'),
-(4, 'Kelas X.4'),
-(5, 'Kelas X.5'),
-(6, 'Kelas X.6'),
-(7, 'Kelas X.7'),
-(8, 'Kelas XI IPA.1'),
-(9, 'Kelas XI IPA.2'),
-(10, 'Kelas XI IPA.3'),
-(11, 'Kelas XI IPA.4'),
-(12, 'Kelas XI IPA.5'),
-(13, 'Kelas XI IPA.6'),
-(14, 'Kelas XI IPA.7'),
-(15, 'Kelas XI IPS.1'),
-(16, 'Kelas XI IPS.2'),
-(17, 'Kelas XI IPS.3'),
-(18, 'Kelas XI IPS.4'),
-(19, 'Kelas XI IPS.5'),
-(20, 'Kelas XI IPS.6'),
-(21, 'Kelas XI IPS.7');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tbl_komentar`
---
-
-CREATE TABLE `tbl_komentar` (
-  `komentar_id` int(11) NOT NULL,
-  `komentar_nama` varchar(30) DEFAULT NULL,
-  `komentar_email` varchar(50) DEFAULT NULL,
-  `komentar_isi` varchar(120) DEFAULT NULL,
-  `komentar_tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `komentar_status` varchar(2) DEFAULT NULL,
-  `komentar_tulisan_id` int(11) DEFAULT NULL,
-  `komentar_parent` int(11) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tbl_komentar`
---
-
-INSERT INTO `tbl_komentar` (`komentar_id`, `komentar_nama`, `komentar_email`, `komentar_isi`, `komentar_tanggal`, `komentar_status`, `komentar_tulisan_id`, `komentar_parent`) VALUES
-(1, 'M Fikri', 'fikrifiver97@gmail.com', ' Nice Post.', '2018-08-07 15:09:07', '1', 24, 0),
-(2, 'M Fikri Setiadi', 'fikrifiver97@gmail.com', ' Awesome Post', '2018-08-07 15:14:26', '1', 24, 0),
-(3, 'Joko', 'joko@gmail.com', 'Thank you.', '2018-08-08 03:54:56', '1', 24, 1);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tbl_log_aktivitas`
+-- Table structure for table `tbl_log_aktivitas`
 --
 
 CREATE TABLE `tbl_log_aktivitas` (
@@ -344,7 +279,7 @@ CREATE TABLE `tbl_log_aktivitas` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_mapel`
+-- Table structure for table `tbl_mapel`
 --
 
 CREATE TABLE `tbl_mapel` (
@@ -354,7 +289,7 @@ CREATE TABLE `tbl_mapel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_mapel`
+-- Dumping data for table `tbl_mapel`
 --
 
 INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`, `keterangan_mapel`) VALUES
@@ -365,27 +300,49 @@ INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`, `keterangan_mapel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengaturan`
+-- Table structure for table `tbl_pengaturan`
 --
 
 CREATE TABLE `tbl_pengaturan` (
-  `id_pengaturan` int(11) NOT NULL,
-  `visi` varchar(200) NOT NULL,
-  `misi` varchar(200) NOT NULL,
+  `id` int(11) NOT NULL,
+  `sambutan` text NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `visi` text NOT NULL,
+  `misi` text NOT NULL,
   `sejarah` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_pengaturan`
+-- Dumping data for table `tbl_pengaturan`
 --
 
-INSERT INTO `tbl_pengaturan` (`id_pengaturan`, `visi`, `misi`, `sejarah`) VALUES
-(1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa similique quae maiores consectetur ', 'Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Eveniet impedit nulla beatae quos distinctio alias odio quas, unde voluptas accusantium incidunt illo deserunt, nihil amet necessitatibus exe', 'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolore voluptatum praesentium debitis, alias ut amet, quod ab possimus iusto voluptas laudantium nemo quos, blanditiis iste omnis deleniti itaque accusamus nihil quidem est. Ipsa harum voluptatem iste velit porro, ad debitis molestiae. Reiciendis dolorem libero eaque assumenda et voluptas reprehenderit iste mollitia, commodi error harum, cum facere maxime adipisci ex ipsam sequi. Officiis non incidunt, dicta inventore in ducimus quo unde error id sapiente tempora, natus repellendus est adipisci quae, a numquam aut doloremque, consequatur aliquid. Esse magni aperiam similique optio recusandae quisquam odit tempora dicta unde, autem? Nihil tenetur deleniti ipsum commodi molestias hic, excepturi, minima iste quibusdam fugiat doloremque velit omnis nostrum dignissimos officia! Cupiditate, veritatis, cum! Repellendus consequuntur, quibusdam quo ut error aspernatur ipsam voluptatem fuga eius, molestiae.');
+INSERT INTO `tbl_pengaturan` (`id`, `sambutan`, `foto`, `visi`, `misi`, `sejarah`) VALUES
+(2, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam quia molestias suscipit quae pariatur illo provident eum quasi sapiente, qui sed praesentium harum nihil maiores dolores a numquam odit.\r\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, modi perferendis. Quidem nesciunt quam, aperiam ullam provident dolorem quis beatae, corporis totam eveniet tempore magnam nisi quibusdam blanditiis explicabo tempora!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos eligendi itaque voluptate fugit temporibus? Veritatis dicta modi adipisci placeat temporibus dolorem est quae quidem deserunt aut, provident magni cumque.\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium nobis minima laboriosam voluptates odit cupiditate animi. Quas, officiis sunt! Totam quisquam ratione sit veritatis blanditiis inventore error ab quod.lorem', '8f3a2444b3ca94fe60e99b5235df3c54.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam quia molestias suscipit quae pariatur illo provident eum quasi sapiente, qui sed praesentium harum nihil maiores dolores a numquam odit.\r\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, modi perferendis. Quidem nesciunt quam, aperiam ullam provident dolorem quis beatae, corporis totam eveniet tempore magnam nisi quibusdam blanditiis explicabo tempora!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos eligendi itaque voluptate fugit temporibus? Veritatis dicta modi adipisci placeat temporibus dolorem est quae quidem deserunt aut, provident magni cumque.\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium nobis minima laboriosam voluptates odit cupiditate animi. Quas, officiis sunt! Totam quisquam ratione sit veritatis blanditiis inventore error ab quod.lorem', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam quia molestias suscipit quae pariatur illo provident eum quasi sapiente, qui sed praesentium harum nihil maiores dolores a numquam odit.\r\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, modi perferendis. Quidem nesciunt quam, aperiam ullam provident dolorem quis beatae, corporis totam eveniet tempore magnam nisi quibusdam blanditiis explicabo tempora!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos eligendi itaque voluptate fugit temporibus? Veritatis dicta modi adipisci placeat temporibus dolorem est quae quidem deserunt aut, provident magni cumque.\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium nobis minima laboriosam voluptates odit cupiditate animi. Quas, officiis sunt! Totam quisquam ratione sit veritatis blanditiis inventore error ab quod.lorem', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quam quia molestias suscipit quae pariatur illo provident eum quasi sapiente, qui sed praesentium harum nihil maiores dolores a numquam odit.\r\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, modi perferendis. Quidem nesciunt quam, aperiam ullam provident dolorem quis beatae, corporis totam eveniet tempore magnam nisi quibusdam blanditiis explicabo tempora!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos eligendi itaque voluptate fugit temporibus? Veritatis dicta modi adipisci placeat temporibus dolorem est quae quidem deserunt aut, provident magni cumque.\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium nobis minima laboriosam voluptates odit cupiditate animi. Quas, officiis sunt! Totam quisquam ratione sit veritatis blanditiis inventore error ab quod.lorem');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengguna`
+-- Table structure for table `tbl_pengaturansmp`
+--
+
+CREATE TABLE `tbl_pengaturansmp` (
+  `id_pengaturansmp` int(11) NOT NULL,
+  `visi` text NOT NULL,
+  `misi` text NOT NULL,
+  `sejarah` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_pengaturansmp`
+--
+
+INSERT INTO `tbl_pengaturansmp` (`id_pengaturansmp`, `visi`, `misi`, `sejarah`) VALUES
+(1, 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nobis sunt ratione non recusandae et tempora delectus, eum eaque. Ut libero ex maxime nisi quam quo atque exercitationem corrupti modi!\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quidem in maxime nulla veniam, cupiditate atque totam necessitatibus aliquid, incidunt, voluptates sapiente unde quod ratione quasi omnis corrupti delectus fugit.', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nobis sunt ratione non recusandae et tempora delectus, eum eaque. Ut libero ex maxime nisi quam quo atque exercitationem corrupti modi!\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quidem in maxime nulla veniam, cupiditate atque totam necessitatibus aliquid, incidunt, voluptates sapiente unde quod ratione quasi omnis corrupti delectus fugit.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pengguna`
 --
 
 CREATE TABLE `tbl_pengguna` (
@@ -409,17 +366,17 @@ CREATE TABLE `tbl_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengguna`
+-- Dumping data for table `tbl_pengguna`
 --
 
 INSERT INTO `tbl_pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_moto`, `pengguna_jenkel`, `pengguna_username`, `pengguna_password`, `pengguna_tentang`, `pengguna_email`, `pengguna_nohp`, `pengguna_facebook`, `pengguna_twitter`, `pengguna_linkdin`, `pengguna_google_plus`, `pengguna_status`, `pengguna_level`, `pengguna_register`, `pengguna_photo`) VALUES
-(1, 'Ajijon', 'a', 'L', 'akuadmin', '21232f297a57a5a743894a0e4a801fc3', '\\', 'itzonefutur@gmail.com', '08755547645', '-', '-', '', '', 1, '1', '2020-09-03 06:07:55', '6ff896557768354eae9f9add764707f2.jpg'),
-(2, 'kkk', NULL, 'L', 'user', '6ad14ba9986e3615423dfca256d04e3f', NULL, 'user@mail.com', '134141341354', NULL, NULL, NULL, NULL, 1, '2', '2022-12-29 03:31:55', '8ea74dd021d956683ca067546edaa8eb.jpg');
+(1, 'Pinus', NULL, 'L', '@pinus', 'f0a3182e570809d7cde6f8b1de8e371a', NULL, 'pinus@gmail.com', '+6281330177147', NULL, NULL, NULL, NULL, 1, '1', '2023-01-11 14:09:03', '705d205189b07691bce6cde33cccbd0f.png'),
+(2, 'Admin Pinus', NULL, 'L', '@pinus', 'f0a3182e570809d7cde6f8b1de8e371a', NULL, 'adminpinus@gmail.com', '+6281330177147', NULL, NULL, NULL, NULL, 1, '2', '2023-01-11 14:10:20', 'd9ee9ce4036576b492b961a3de325ea2.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengumuman`
+-- Table structure for table `tbl_pengumuman`
 --
 
 CREATE TABLE `tbl_pengumuman` (
@@ -431,7 +388,7 @@ CREATE TABLE `tbl_pengumuman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengumuman`
+-- Dumping data for table `tbl_pengumuman`
 --
 
 INSERT INTO `tbl_pengumuman` (`pengumuman_id`, `pengumuman_judul`, `pengumuman_deskripsi`, `pengumuman_tanggal`, `pengumuman_author`) VALUES
@@ -440,7 +397,7 @@ INSERT INTO `tbl_pengumuman` (`pengumuman_id`, `pengumuman_judul`, `pengumuman_d
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengunjung`
+-- Table structure for table `tbl_pengunjung`
 --
 
 CREATE TABLE `tbl_pengunjung` (
@@ -451,7 +408,7 @@ CREATE TABLE `tbl_pengunjung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengunjung`
+-- Dumping data for table `tbl_pengunjung`
 --
 
 INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung_ip`, `pengunjung_perangkat`) VALUES
@@ -482,77 +439,67 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (954, '2022-12-31 17:09:44', '::1', 'Chrome'),
 (955, '2023-01-01 03:45:58', '127.0.0.1', 'Firefox'),
 (956, '2023-01-02 01:09:13', '127.0.0.1', 'Firefox'),
-(957, '2023-01-02 01:27:05', '::1', 'Chrome');
+(957, '2023-01-02 01:27:05', '::1', 'Chrome'),
+(958, '2023-01-03 00:50:16', '127.0.0.1', 'Firefox'),
+(959, '2023-01-03 15:17:30', '::1', 'Chrome'),
+(960, '2023-01-04 11:53:08', '::1', 'Chrome'),
+(961, '2023-01-04 22:25:41', '::1', 'Chrome'),
+(962, '2023-01-05 22:39:48', '::1', 'Chrome'),
+(963, '2023-01-05 23:35:33', '127.0.0.1', 'Firefox'),
+(964, '2023-01-07 03:30:00', '::1', 'Chrome'),
+(965, '2023-01-07 10:51:47', '127.0.0.1', 'Firefox'),
+(966, '2023-01-08 01:49:46', '127.0.0.1', 'Firefox'),
+(967, '2023-01-08 01:50:31', '::1', 'Chrome'),
+(968, '2023-01-09 11:57:48', '::1', 'Chrome'),
+(969, '2023-01-10 00:07:49', '127.0.0.1', 'Firefox'),
+(970, '2023-01-10 00:20:45', '::1', 'Chrome'),
+(971, '2023-01-11 00:44:46', '127.0.0.1', 'Firefox'),
+(972, '2023-01-11 01:27:01', '::1', 'Chrome'),
+(973, '2023-01-12 00:36:41', '127.0.0.1', 'Firefox'),
+(974, '2023-01-12 00:37:20', '::1', 'Chrome');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_prestasi`
+-- Table structure for table `tbl_prestasisd`
 --
 
-CREATE TABLE `tbl_prestasi` (
+CREATE TABLE `tbl_prestasisd` (
   `id` int(5) NOT NULL,
   `ket` varchar(30) NOT NULL,
   `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_prestasi`
+-- Dumping data for table `tbl_prestasisd`
 --
 
-INSERT INTO `tbl_prestasi` (`id`, `ket`, `foto`) VALUES
-(0, 'bbbbbbbbbbbbbbb', 'b1b7c5f7e227a8c3ec6969880ea5c01a.jpg');
+INSERT INTO `tbl_prestasisd` (`id`, `ket`, `foto`) VALUES
+(2, 'Juara 1 lomba pidato B.Inggris', '94cc8a0e86b105b65e40e721025dcb02.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_siswa`
+-- Table structure for table `tbl_prestasismp`
 --
 
-CREATE TABLE `tbl_siswa` (
-  `siswa_id` int(11) NOT NULL,
-  `siswa_nis` varchar(20) DEFAULT NULL,
-  `siswa_nama` varchar(70) DEFAULT NULL,
-  `siswa_jenkel` varchar(2) DEFAULT NULL,
-  `siswa_kelas_id` int(11) DEFAULT NULL,
-  `siswa_photo` varchar(40) DEFAULT NULL
+CREATE TABLE `tbl_prestasismp` (
+  `id` int(5) NOT NULL,
+  `ket` varchar(30) NOT NULL,
+  `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_siswa`
+-- Dumping data for table `tbl_prestasismp`
 --
 
-INSERT INTO `tbl_siswa` (`siswa_id`, `siswa_nis`, `siswa_nama`, `siswa_jenkel`, `siswa_kelas_id`, `siswa_photo`) VALUES
-(1, '9287482', 'Alvaro Sanchez', 'L', 8, '083d547659a2d4bb15c0322d15955da5.png'),
-(2, '9287483', 'Ririn Cantika', 'P', 8, '74eec6ad37550cc12fe8fa83d46878af.jpg'),
-(4, '123083', 'Ari Hidayat', 'L', 1, 'e371e67618ad53c99de380782c373023.png'),
-(5, '123084', 'Irma Chaiyo', 'P', 1, '1e148b42c71562841ba3018fc97b748a.png'),
-(6, '123085', 'Nadila Ginting', 'P', 1, '8125da21f903803b6992214967239ab3.png'),
-(7, '123086', 'Anna Marina', 'P', 1, '33eaf3e3faf28a0fe31670c022f641f1.png'),
-(8, '123086', 'Dhea Lubis', 'P', 1, '03e651410e969c3c26e8e0d35380470d.png'),
-(9, '123087', 'Nadia Ginting', 'P', 1, 'd7823f8d98d376c085aa284a54d63264.png'),
-(10, '123088', 'Mita Febrina', 'P', 1, 'eca0280a4a57c911ee68b8318d1e517f.png'),
-(11, '123089', 'Elizabeth ', 'P', 1, 'ec1232a08d650bc8c3197c9db95a7fc8.png'),
-(12, '123090', 'Della Guswono', 'P', 1, '6c82fce13bb3eff1fd2e897b2c3cfeeb.png');
+INSERT INTO `tbl_prestasismp` (`id`, `ket`, `foto`) VALUES
+(1, 'Juara 1 lomba pidato', '203ad8e6bb9e6af6604135966e3bd5cb.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_testimoni`
---
-
-CREATE TABLE `tbl_testimoni` (
-  `testimoni_id` int(11) NOT NULL,
-  `testimoni_nama` varchar(30) DEFAULT NULL,
-  `testimoni_isi` varchar(120) DEFAULT NULL,
-  `testimoni_email` varchar(35) DEFAULT NULL,
-  `testimoni_tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tbl_tulisan`
+-- Table structure for table `tbl_tulisan`
 --
 
 CREATE TABLE `tbl_tulisan` (
@@ -571,37 +518,15 @@ CREATE TABLE `tbl_tulisan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_tulisan`
+-- Dumping data for table `tbl_tulisan`
 --
 
 INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
-(27, 'jgxhxhhgvn gxhfzxyr', '<p>lorem nvcjcjgcj&nbsp; jctxcut</p>\r\n', '2022-12-29 03:42:16', 1, 'Pendidikan', 0, 'af73e70e273852b4ad0e68d07c85d980.png', 2, 'kkk', 0, 'jgxhxhhgvn-gxhfzxyr');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tbl_video`
---
-
-CREATE TABLE `tbl_video` (
-  `id_video` int(11) NOT NULL,
-  `id_mapel` int(11) NOT NULL,
-  `kelas_id` int(11) NOT NULL,
-  `kode_video` varchar(100) NOT NULL,
-  `judul_video` varchar(150) NOT NULL,
-  `deskripsi_video` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tbl_video`
---
-
-INSERT INTO `tbl_video` (`id_video`, `id_mapel`, `kelas_id`, `kode_video`, `judul_video`, `deskripsi_video`) VALUES
-(2, 3, 2, 'EdQE_oeU2yo', 'Materi IPS Kelas 7 Semester Genap Bab III', 'Materi IPS Kelas 7 Semester Genap Bab III'),
-(3, 3, 15, 'z2VF7j2RBzM', 'Materi IPS Kelas 8 k13 (Perlawanan Terhadap Kolonialisme dan Imperialisme) Part 1', 'Materi IPS Kelas 8 k13 (Perlawanan Terhadap Kolonialisme dan Imperialisme) Part 1\r\n\r\n'),
-(4, 3, 15, 'lIQBbvBZcqk', 'MATERI IPS MANUSIA DAN LINGKUNGAN, KELAS 4 TEMA 9 SUBTEMA 1', 'MATERI IPS MANUSIA DAN LINGKUNGAN, KELAS 4 TEMA 9 SUBTEMA 1\r\n'),
-(5, 3, 17, 'DNoj82nGmK8', 'Materi IPS Kelas 4 SD Tema 9 Subtema 2. Pemanfaatan Sumber Daya Alam', 'Materi IPS Kelas 4 SD Tema 9 Subtema 2. Pemanfaatan Sumber Daya Alam'),
-(6, 3, 17, 'kdmnP7Me0xg', 'Video Pembelajaran Kelas 8 K13 - IPS - Perubahan Masyarakat Indonesia pada Masa Penjajahan', 'Video Pembelajaran Kelas 8 K13 - IPS - Perubahan Masyarakat Indonesia pada Masa Penjajahan');
+(27, 'jgxhxhhgvn gxhfzxyr', '<p>lorem nvcjcjgcj&nbsp; jctxcut</p>\r\n', '2022-12-29 03:42:16', 1, 'Pendidikan', 0, 'af73e70e273852b4ad0e68d07c85d980.png', 2, 'kkk', 0, 'jgxhxhhgvn-gxhfzxyr'),
+(28, 'aaaaaaaaaaaaaa', '<p>lot vclJCBJKVBJKDS VKBSDKHVB DB VKSDKHVKHkh jkvbskavb fsvkhbfskhavb kfsbvksfa vkhsfbvsfvfs</p>\r\n', '2023-01-05 03:56:36', 1, 'Pendidikan', 0, '5ef281b838e770e9fd16934e18830829.jpg', 1, 'Ajijon', 0, 'aaaaaaaaaaaaaa'),
+(29, 'adddd ', '<p>a das dsa dsa das d asd sadsa dsa dasdsad sa dsa dsadsadsad sa d a</p>\r\n', '2023-01-05 03:56:56', 13, 'Olah Raga', 2, '3210a778159fd0f6780c46e41e8815ad.png', 1, 'Ajijon', 0, 'adddd'),
+(30, 'smp pinus', '', '2023-01-08 01:56:12', 1, 'Pendidikan', 6, '037e96eba4775290a0d7948c48c63bdd.jpeg', 1, 'Ajijon', 0, 'smp-pinus'),
+(31, 'aaaaaaaaaaaa', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus saepe explicabo fuga adipisci voluptatem suscipit ad temporibus pariatur, ut voluptatibus minus, iure velit cum error in voluptate at! Nostrum, optio?</p>\r\n', '2023-01-10 12:58:20', 5, 'Penelitian', 2, 'df64e1fbe329eb606574b5f41f262305.jpg', 1, 'Ajijon', 0, 'aaaaaaaaaaaa');
 
 --
 -- Indexes for dumped tables
@@ -627,16 +552,28 @@ ALTER TABLE `tbl_banners`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_ekstrasd`
+--
+ALTER TABLE `tbl_ekstrasd`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_ekstrasmp`
+--
+ALTER TABLE `tbl_ekstrasmp`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_fasilitas`
 --
 ALTER TABLE `tbl_fasilitas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_files`
+-- Indexes for table `tbl_fasilitassmp`
 --
-ALTER TABLE `tbl_files`
-  ADD PRIMARY KEY (`file_id`);
+ALTER TABLE `tbl_fasilitassmp`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_galeri`
@@ -647,35 +584,22 @@ ALTER TABLE `tbl_galeri`
   ADD KEY `galeri_pengguna_id` (`galeri_pengguna_id`);
 
 --
+-- Indexes for table `tbl_galerismp`
+--
+ALTER TABLE `tbl_galerismp`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   ADD PRIMARY KEY (`guru_id`);
 
 --
--- Indexes for table `tbl_inbox`
---
-ALTER TABLE `tbl_inbox`
-  ADD PRIMARY KEY (`inbox_id`);
-
---
 -- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`kategori_id`);
-
---
--- Indexes for table `tbl_kelas`
---
-ALTER TABLE `tbl_kelas`
-  ADD PRIMARY KEY (`kelas_id`);
-
---
--- Indexes for table `tbl_komentar`
---
-ALTER TABLE `tbl_komentar`
-  ADD PRIMARY KEY (`komentar_id`),
-  ADD KEY `komentar_tulisan_id` (`komentar_tulisan_id`);
 
 --
 -- Indexes for table `tbl_log_aktivitas`
@@ -691,10 +615,16 @@ ALTER TABLE `tbl_mapel`
   ADD PRIMARY KEY (`id_mapel`);
 
 --
--- Indexes for table `tbl_pengguna`
+-- Indexes for table `tbl_pengaturan`
 --
-ALTER TABLE `tbl_pengguna`
-  ADD PRIMARY KEY (`pengguna_id`);
+ALTER TABLE `tbl_pengaturan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_pengaturansmp`
+--
+ALTER TABLE `tbl_pengaturansmp`
+  ADD PRIMARY KEY (`id_pengaturansmp`);
 
 --
 -- Indexes for table `tbl_pengumuman`
@@ -709,16 +639,16 @@ ALTER TABLE `tbl_pengunjung`
   ADD PRIMARY KEY (`pengunjung_id`);
 
 --
--- Indexes for table `tbl_siswa`
+-- Indexes for table `tbl_prestasisd`
 --
-ALTER TABLE `tbl_siswa`
-  ADD PRIMARY KEY (`siswa_id`);
+ALTER TABLE `tbl_prestasisd`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_testimoni`
+-- Indexes for table `tbl_prestasismp`
 --
-ALTER TABLE `tbl_testimoni`
-  ADD PRIMARY KEY (`testimoni_id`);
+ALTER TABLE `tbl_prestasismp`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_tulisan`
@@ -727,12 +657,6 @@ ALTER TABLE `tbl_tulisan`
   ADD PRIMARY KEY (`tulisan_id`),
   ADD KEY `tulisan_kategori_id` (`tulisan_kategori_id`),
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`);
-
---
--- Indexes for table `tbl_video`
---
-ALTER TABLE `tbl_video`
-  ADD PRIMARY KEY (`id_video`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -747,47 +671,52 @@ ALTER TABLE `tbl_agenda`
 -- AUTO_INCREMENT for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tbl_banners`
+--
+ALTER TABLE `tbl_banners`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tbl_ekstrasd`
+--
+ALTER TABLE `tbl_ekstrasd`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbl_ekstrasmp`
+--
+ALTER TABLE `tbl_ekstrasmp`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_fasilitas`
 --
 ALTER TABLE `tbl_fasilitas`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `tbl_files`
+-- AUTO_INCREMENT for table `tbl_fasilitassmp`
 --
-ALTER TABLE `tbl_files`
-  MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `tbl_fasilitassmp`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `tbl_galerismp`
+--
+ALTER TABLE `tbl_galerismp`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   MODIFY `guru_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `tbl_inbox`
---
-ALTER TABLE `tbl_inbox`
-  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
 -- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `tbl_kelas`
---
-ALTER TABLE `tbl_kelas`
-  MODIFY `kelas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
---
--- AUTO_INCREMENT for table `tbl_komentar`
---
-ALTER TABLE `tbl_komentar`
-  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_log_aktivitas`
 --
@@ -799,10 +728,15 @@ ALTER TABLE `tbl_log_aktivitas`
 ALTER TABLE `tbl_mapel`
   MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `tbl_pengguna`
+-- AUTO_INCREMENT for table `tbl_pengaturan`
 --
-ALTER TABLE `tbl_pengguna`
-  MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `tbl_pengaturan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_pengaturansmp`
+--
+ALTER TABLE `tbl_pengaturansmp`
+  MODIFY `id_pengaturansmp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_pengumuman`
 --
@@ -812,27 +746,22 @@ ALTER TABLE `tbl_pengumuman`
 -- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=958;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=975;
 --
--- AUTO_INCREMENT for table `tbl_siswa`
+-- AUTO_INCREMENT for table `tbl_prestasisd`
 --
-ALTER TABLE `tbl_siswa`
-  MODIFY `siswa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `tbl_prestasisd`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `tbl_testimoni`
+-- AUTO_INCREMENT for table `tbl_prestasismp`
 --
-ALTER TABLE `tbl_testimoni`
-  MODIFY `testimoni_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbl_prestasismp`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
-  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
---
--- AUTO_INCREMENT for table `tbl_video`
---
-ALTER TABLE `tbl_video`
-  MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
