@@ -129,18 +129,6 @@
       <span>Data User</span></a>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseTwo">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Profil </span>
-    </a>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturan' ?>">Profil SD</a>
-        <a class="collapse-item" href="<?php echo base_url() . 'admin/pengaturansmp' ?>">Profil SMP</a>
-      </div>
-    </div>
-  </li>
   <!-- Divider -->
 
 
